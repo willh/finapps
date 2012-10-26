@@ -26,6 +26,12 @@
 		B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21570163AA55900091680 /* FinAppsPartyAppTests.m */; };
 		B3E215BA163AA60A00091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E215B7163AA5B500091680 /* libFinAppsPartyAppBackend.a */; };
 		B3E215BE163AA80900091680 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E215BD163AA80900091680 /* MainStoryboard.storyboard */; };
+		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
+		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
+		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
+		ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
+		ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
+		ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +89,12 @@
 		B3E21570163AA55900091680 /* FinAppsPartyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinAppsPartyAppTests.m; sourceTree = "<group>"; };
 		B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FinAppsPartyAppBackend.xcodeproj; path = FinAppsPartyAppBackend/FinAppsPartyAppBackend.xcodeproj; sourceTree = "<group>"; };
 		B3E215BD163AA80900091680 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
+		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
+		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		ED0E487C163ACFA1007039BB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCaseOneViewController.h; sourceTree = "<group>"; };
+		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCaseOneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +158,11 @@
 		B3E21547163AA55900091680 /* FinAppsPartyApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
+				ED0E487C163ACFA1007039BB /* LoginViewController.m */,
+				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
+				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
+				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21550163AA55900091680 /* AppDelegate.h */,
 				B3E21551163AA55900091680 /* AppDelegate.m */,
 				B3E2157A163AA57C00091680 /* Backend */,
@@ -204,6 +221,15 @@
 				B3E215B9163AA5B500091680 /* FinAppsPartyAppBackendTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ED0E4876163ACF70007039BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E4877163ACF88007039BB /* Button.png */,
+				ED0E4878163ACF88007039BB /* Button@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +332,8 @@
 				B3E21556163AA55900091680 /* Default@2x.png in Resources */,
 				B3E21558163AA55900091680 /* Default-568h@2x.png in Resources */,
 				B3E215BE163AA80900091680 /* MainStoryboard.storyboard in Resources */,
+				ED0E4879163ACF88007039BB /* Button.png in Resources */,
+				ED0E487A163ACF88007039BB /* Button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +371,8 @@
 				B3E2154E163AA55900091680 /* main.m in Sources */,
 				B3E21552163AA55900091680 /* AppDelegate.m in Sources */,
 				B3E2155B163AA55900091680 /* FinAppsPartyApp.xcdatamodeld in Sources */,
+				ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */,
+				ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +381,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */,
+				ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */,
+				ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
