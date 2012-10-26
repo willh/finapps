@@ -43,6 +43,11 @@
 		ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A68CE163AD80F00EB3648 /* MenuViewController.m */; };
 		ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED733968163B111200B1FBD1 /* LoanAmountViewController.m */; };
 		ED733979163B1B3500B1FBD1 /* ReplaceSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ED733978163B1B3500B1FBD1 /* ReplaceSegue.m */; };
+		ED73399F163B4A9400B1FBD1 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED73399E163B4A9400B1FBD1 /* UserDetailsViewController.m */; };
+		ED7339A1163B4C7900B1FBD1 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7339A0163B4C7900B1FBD1 /* 111-user.png */; };
+		ED7339A3163B4CD600B1FBD1 /* 75-phone.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7339A2163B4CD600B1FBD1 /* 75-phone.png */; };
+		ED7339A6163B4D7100B1FBD1 /* CreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */; };
+		ED7339A8163B4DC200B1FBD1 /* 192-credit-card.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +133,13 @@
 		ED733968163B111200B1FBD1 /* LoanAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanAmountViewController.m; sourceTree = "<group>"; };
 		ED733977163B1B3500B1FBD1 /* ReplaceSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceSegue.h; sourceTree = "<group>"; };
 		ED733978163B1B3500B1FBD1 /* ReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceSegue.m; sourceTree = "<group>"; };
+		ED73399D163B4A9400B1FBD1 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
+		ED73399E163B4A9400B1FBD1 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
+		ED7339A0163B4C7900B1FBD1 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
+		ED7339A2163B4CD600B1FBD1 /* 75-phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "75-phone.png"; sourceTree = "<group>"; };
+		ED7339A4163B4D7100B1FBD1 /* CreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardViewController.h; sourceTree = "<group>"; };
+		ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardViewController.m; sourceTree = "<group>"; };
+		ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "192-credit-card.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +176,8 @@
 		B3E21530163AA55900091680 = {
 			isa = PBXGroup;
 			children = (
+				ED73399D163B4A9400B1FBD1 /* UserDetailsViewController.h */,
+				ED73399E163B4A9400B1FBD1 /* UserDetailsViewController.m */,
 				B3E21547163AA55900091680 /* FinAppsPartyApp */,
 				B3E21569163AA55900091680 /* FinAppsPartyAppTests */,
 				B3E2153E163AA55900091680 /* Frameworks */,
@@ -296,6 +310,9 @@
 		ED0E4876163ACF70007039BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */,
+				ED7339A2163B4CD600B1FBD1 /* 75-phone.png */,
+				ED7339A0163B4C7900B1FBD1 /* 111-user.png */,
 				ED0E4877163ACF88007039BB /* Button.png */,
 				ED0E4878163ACF88007039BB /* Button@2x.png */,
 			);
@@ -329,6 +346,8 @@
 				ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */,
 				ED733967163B111200B1FBD1 /* LoanAmountViewController.h */,
 				ED733968163B111200B1FBD1 /* LoanAmountViewController.m */,
+				ED7339A4163B4D7100B1FBD1 /* CreditCardViewController.h */,
+				ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -435,6 +454,9 @@
 				B3E215BE163AA80900091680 /* MainStoryboard.storyboard in Resources */,
 				ED0E4879163ACF88007039BB /* Button.png in Resources */,
 				ED0E487A163ACF88007039BB /* Button@2x.png in Resources */,
+				ED7339A1163B4C7900B1FBD1 /* 111-user.png in Resources */,
+				ED7339A3163B4CD600B1FBD1 /* 75-phone.png in Resources */,
+				ED7339A8163B4DC200B1FBD1 /* 192-credit-card.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,10 +500,10 @@
 				ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */,
 				ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */,
 				ED733979163B1B3500B1FBD1 /* ReplaceSegue.m in Sources */,
+				ED73399F163B4A9400B1FBD1 /* UserDetailsViewController.m in Sources */,
+				ED7339A6163B4D7100B1FBD1 /* CreditCardViewController.m in Sources */,
 				B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */,
 				B3E21718163B3C0B00091680 /* User.m in Sources */,
-				B3E2171B163B3C0B00091680 /* Action.m in Sources */,
-				B3E2172A163B453100091680 /* Property.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
