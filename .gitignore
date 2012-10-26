@@ -1,8 +1,14 @@
-ogs
 target/
-tmp
 .history
-dist
 .idea/
 .idea_modules/
 .DS_Store
+bin/
+data/
+db/
+dist/
+logs/
+test-result/
+lib/
+tmp/
+modules/
