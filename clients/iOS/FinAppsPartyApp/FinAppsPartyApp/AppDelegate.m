@@ -9,8 +9,7 @@
 #import "AppDelegate.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
-#import "Action.h"
-#import "Property.h"
+#import "BaseDAO.h"
 
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
@@ -42,17 +41,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
-        NSFetchRequest *actionsFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Action"];
-        NSArray *actions = [managedObjectContext executeFetchRequest:actionsFetchRequest error:nil];
-        for (Action *action in actions) {
-            [managedObjectContext deleteObject:action];
-        }
+        BaseDAO *actionDAO = [[BaseDAO alloc] initWithManagedObjectContext:managedObjectContext andEntityName:@"Action"];
         
-        NSFetchRequest *propertiesFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Property"];
-        NSArray *properties = [managedObjectContext executeFetchRequest:propertiesFetchRequest error:nil];
-        for (Property *property in properties) {
-            [managedObjectContext deleteObject:property];
-        }
+        [actionDAO deleteAllObjects];
+
+        BaseDAO *propertiesDAO = [[BaseDAO alloc] initWithManagedObjectContext:managedObjectContext andEntityName:@"Property"];
+        [propertiesDAO deleteAllObjects];
         
         return YES;
     }];
