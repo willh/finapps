@@ -49,6 +49,7 @@
 		B3E216D0163B041D00091680 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216CF163B041D00091680 /* CFNetwork.framework */; };
 		B3E216D2163B042100091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216D1163B042100091680 /* AudioToolbox.framework */; };
 		B3E216D4163B042600091680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216D3163B042600091680 /* AVFoundation.framework */; };
+		B3E216E1163B180600091680 /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216E0163B180600091680 /* AccountService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		B3E216CF163B041D00091680 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B3E216D1163B042100091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B3E216D3163B042600091680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B3E216DF163B180600091680 /* AccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountService.h; sourceTree = "<group>"; };
+		B3E216E0163B180600091680 /* AccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 		B3E2158B163AA5B400091680 /* FinAppsPartyAppBackend */ = {
 			isa = PBXGroup;
 			children = (
+				B3E216DF163B180600091680 /* AccountService.h */,
+				B3E216E0163B180600091680 /* AccountService.m */,
 				B3E2160C163ACE3C00091680 /* BaseService.h */,
 				B3E2160D163ACE3C00091680 /* BaseService.m */,
 				B3E2168C163AF11600091680 /* CallingEngine.h */,
@@ -437,6 +442,7 @@
 				B3E21611163ACF4A00091680 /* LoginService.m in Sources */,
 				B3E21673163AE82B00091680 /* TwilioService.m in Sources */,
 				B3E2168E163AF11600091680 /* CallingEngine.m in Sources */,
+				B3E216E1163B180600091680 /* AccountService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
