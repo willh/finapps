@@ -8,18 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MortgageApplicationViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate> {
-    UITextField *purchasingPriceTextField;
-    UITextField *requestedAmountTextField;
-    UITextField *termTimeTextField;
-
-    NSArray *productTypes;
+@interface MortgageApplicationViewController : UIViewController <UITextFieldDelegate> {
+    UITextField *annualSalaryTextBox;
+    UITextField *annualIncomeTextBox;
+    UITextField *monthlyCreditTextBox;
+    UILabel *dependantsLabel;
+    UISlider *dependantsSlider;
     UIButton *applyButton;
 }
 
-@property (nonatomic, retain) IBOutlet UITextField *purchasingPriceTextField;
-@property (nonatomic, retain) IBOutlet UITextField *requestedAmountTextField;
-@property (nonatomic, retain) IBOutlet UITextField *termTimeTextField;
+@property (nonatomic, retain) IBOutlet UITextField *annualSalaryTextBox;
+@property (nonatomic, retain) IBOutlet UITextField *annualIncomeTextBox;
+@property (nonatomic, retain) IBOutlet UITextField *monthlyCreditTextBox;
+@property (nonatomic, retain) IBOutlet UILabel *dependantsLabel;
+@property (nonatomic, retain) IBOutlet UISlider *dependantsSlider;
 @property (nonatomic, retain) IBOutlet UIButton *applyButton;
 
 

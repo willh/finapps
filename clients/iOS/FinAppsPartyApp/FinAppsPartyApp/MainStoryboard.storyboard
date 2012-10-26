@@ -74,24 +74,24 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Purchasing price/value of property (€):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-d1-gMM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is your basic annual salary? (€)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-d1-gMM">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="120,000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckq-gb-g4e">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="36,500" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckq-gb-g4e">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BMH-Dc-n51" id="a76-Dm-KHQ"/>
+                                    <outlet property="delegate" destination="BMH-Dc-n51" id="D30-fA-k6r"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How much do you want to borrow (€):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="64r-n9-rWZ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How much extra annual income do you have? (€)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="64r-n9-rWZ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="56,000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-DW-6fH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3,000" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-DW-6fH">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -103,50 +103,82 @@
                                     <constraint firstAttribute="height" constant="44" id="cGU-0u-px1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="View Product Options" backgroundImage="Button.png">
+                                <state key="normal" title="How much could I loan?" backgroundImage="Button.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyButtonTapped" destination="BMH-Dc-n51" eventType="touchUpInside" id="UPz-iz-gq8"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Term of mortage required (years):" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-sV-ln8">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What are your monthly credit commitments? (€)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Jlf-sV-ln8">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="cTZ-6S-aeY"/>
+                                    <constraint firstAttribute="height" constant="38" id="jrE-Jm-o0n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyS-R6-m03">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="875" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyS-R6-m03">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BMH-Dc-n51" id="ib3-KZ-8Qg"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="How many dependants do you have?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-e6-pul">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="FpJ-pQ-cFx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="JvV-DS-7Ih">
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BMH-Dc-n51" eventType="valueChanged" id="lTj-Wf-Fgr"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-22-KBQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="s9U-lF-Cnw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QyS-R6-m03" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5af-bf-cIE"/>
                             <constraint firstItem="ySS-DW-6fH" firstAttribute="top" secondItem="64r-n9-rWZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6iK-KN-6YE"/>
                             <constraint firstAttribute="trailing" secondItem="HeX-d1-gMM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8ER-ll-UyU"/>
-                            <constraint firstItem="aCu-mb-J0M" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8Vp-nu-YmX"/>
+                            <constraint firstItem="QyS-R6-m03" firstAttribute="top" secondItem="6KF-ed-gxS" secondAttribute="top" constant="227" id="JR7-ck-XA9"/>
                             <constraint firstItem="Jlf-sV-ln8" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MNE-YJ-cu1"/>
                             <constraint firstAttribute="trailing" secondItem="ySS-DW-6fH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OkP-sO-lWG"/>
                             <constraint firstItem="ySS-DW-6fH" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S2R-bl-5X0"/>
-                            <constraint firstAttribute="trailing" secondItem="aCu-mb-J0M" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YPn-RS-Wrh"/>
+                            <constraint firstItem="WUe-e6-pul" firstAttribute="top" secondItem="QyS-R6-m03" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="T1K-Eb-uNL"/>
+                            <constraint firstItem="aCu-mb-J0M" firstAttribute="trailing" secondItem="6KF-ed-gxS" secondAttribute="trailing" type="default" id="Vm2-uq-obU"/>
                             <constraint firstItem="64r-n9-rWZ" firstAttribute="top" secondItem="ckq-gb-g4e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cDR-JV-lpo"/>
-                            <constraint firstItem="QyS-R6-m03" firstAttribute="top" secondItem="Jlf-sV-ln8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gHn-wp-Jan"/>
+                            <constraint firstItem="JvV-DS-7Ih" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cgz-WD-nRS"/>
+                            <constraint firstItem="aCu-mb-J0M" firstAttribute="bottom" secondItem="6KF-ed-gxS" secondAttribute="bottom" type="default" id="d6i-sF-in3"/>
+                            <constraint firstItem="JvV-DS-7Ih" firstAttribute="top" secondItem="WUe-e6-pul" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dB8-LX-pSj"/>
+                            <constraint firstItem="JgW-22-KBQ" firstAttribute="centerX" secondItem="JvV-DS-7Ih" secondAttribute="centerX" type="default" id="erL-DU-TKO"/>
                             <constraint firstAttribute="trailing" secondItem="ckq-gb-g4e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hnp-3m-laF"/>
                             <constraint firstAttribute="trailing" secondItem="Jlf-sV-ln8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="htk-Am-5qb"/>
+                            <constraint firstAttribute="trailing" secondItem="JvV-DS-7Ih" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="i5e-Au-5iC"/>
                             <constraint firstItem="ckq-gb-g4e" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="l1k-mm-pXE"/>
                             <constraint firstItem="64r-n9-rWZ" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pU4-Zq-gBP"/>
                             <constraint firstItem="HeX-d1-gMM" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pW8-K1-Zvk"/>
-                            <constraint firstAttribute="bottom" secondItem="aCu-mb-J0M" secondAttribute="bottom" constant="16" id="pWd-TI-AWD"/>
+                            <constraint firstItem="WUe-e6-pul" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="puf-LW-SZ2"/>
+                            <constraint firstItem="JgW-22-KBQ" firstAttribute="top" secondItem="JvV-DS-7Ih" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qTR-R9-KSf"/>
                             <constraint firstItem="Jlf-sV-ln8" firstAttribute="top" secondItem="ySS-DW-6fH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qqh-rw-LM5"/>
+                            <constraint firstAttribute="trailing" secondItem="WUe-e6-pul" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="r3U-yP-5gR"/>
                             <constraint firstAttribute="trailing" secondItem="QyS-R6-m03" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="taf-0z-p1E"/>
+                            <constraint firstItem="aCu-mb-J0M" firstAttribute="leading" secondItem="6KF-ed-gxS" secondAttribute="leading" type="default" id="vjs-GD-F0V"/>
                             <constraint firstItem="HeX-d1-gMM" firstAttribute="top" secondItem="6KF-ed-gxS" secondAttribute="top" type="default" id="wEm-qJ-FWQ"/>
                             <constraint firstAttribute="trailing" secondItem="64r-n9-rWZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wyV-0k-rYN"/>
                             <constraint firstItem="ckq-gb-g4e" firstAttribute="top" secondItem="HeX-d1-gMM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zEy-MN-RWt"/>
@@ -154,15 +186,33 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mortgage Application" id="OqB-7v-rlq"/>
                     <connections>
+                        <outlet property="annualIncomeTextBox" destination="ySS-DW-6fH" id="bwp-EW-5fl"/>
+                        <outlet property="annualSalaryTextBox" destination="ckq-gb-g4e" id="tGS-Le-S5I"/>
                         <outlet property="applyButton" destination="aCu-mb-J0M" id="IvK-kg-giv"/>
-                        <outlet property="purchasingPriceTextField" destination="ckq-gb-g4e" id="mZb-mr-nfH"/>
-                        <outlet property="requestedAmountTextField" destination="ySS-DW-6fH" id="xkI-MG-nYX"/>
-                        <outlet property="termTimeTextField" destination="QyS-R6-m03" id="cUN-zX-bu5"/>
+                        <outlet property="dependantsLabel" destination="JgW-22-KBQ" id="VgS-wc-1Rb"/>
+                        <outlet property="dependantsSlider" destination="JvV-DS-7Ih" id="Huj-gP-o29"/>
+                        <outlet property="monthlyCreditTextBox" destination="QyS-R6-m03" id="MV7-cx-60b"/>
+                        <segue destination="yUv-8j-Ljh" kind="push" identifier="LoanAmount" id="dvi-dd-TZI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qm-6v-kkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1105" y="-679"/>
+        </scene>
+        <!--Loan Amount View Controller-->
+        <scene sceneID="1up-3q-2iQ">
+            <objects>
+                <viewController id="yUv-8j-Ljh" customClass="LoanAmountViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5S-2P-9rq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z3r-Km-7J5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayV-xX-qBH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="-679"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8ur-tS-fwl">
@@ -284,6 +334,46 @@
     <resources>
         <image name="Button.png" width="162" height="42"/>
     </resources>
+    <classes>
+        <class className="LoanAmountViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoanAmountViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTapped:"/>
+                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonTapped:"/>
+                <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mortgageApplicationButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MortgageApplicationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MortgageApplicationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sliderValueChanged:" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="annualIncomeTextBox" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="annualSalaryTextBox" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="applyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dependantsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dependantsSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="monthlyCreditTextBox" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

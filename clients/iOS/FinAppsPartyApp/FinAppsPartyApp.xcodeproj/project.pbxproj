@@ -37,6 +37,7 @@
 		ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
 		ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */; };
 		ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A68CE163AD80F00EB3648 /* MenuViewController.m */; };
+		ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED733968163B111200B1FBD1 /* LoanAmountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MortgageApplicationViewController.m; sourceTree = "<group>"; };
 		ED6A68CD163AD80F00EB3648 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
 		ED6A68CE163AD80F00EB3648 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
+		ED733967163B111200B1FBD1 /* LoanAmountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoanAmountViewController.h; sourceTree = "<group>"; };
+		ED733968163B111200B1FBD1 /* LoanAmountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoanAmountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +294,8 @@
 				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
 				ED4D4EEA163AE85B00F6BDE6 /* MortgageApplicationViewController.h */,
 				ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */,
+				ED733967163B111200B1FBD1 /* LoanAmountViewController.h */,
+				ED733968163B111200B1FBD1 /* LoanAmountViewController.m */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -438,6 +443,7 @@
 				B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */,
 				ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */,
 				ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */,
+				ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

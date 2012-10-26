@@ -7,13 +7,14 @@
 //
 
 #import "MortgageApplicationViewController.h"
+#import "LoanAmountViewController.h"
 
 @interface MortgageApplicationViewController ()
 
 @end
 
 @implementation MortgageApplicationViewController
-@synthesize purchasingPriceTextField, requestedAmountTextField, termTimeTextField;
+@synthesize annualIncomeTextBox, annualSalaryTextBox, monthlyCreditTextBox, dependantsLabel, dependantsSlider, applyButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,8 +27,6 @@
 
 - (void)viewDidLoad
 {
-    productTypes = [[NSArray alloc] initWithObjects:@"Fixed", @"Tracker and Variable", @"Other", nil];
-
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -41,9 +40,20 @@
 #pragma mark - Event handlers
 
 - (IBAction)applyButtonTapped {
-    float amountRequested = [[requestedAmountTextField text] floatValue];
-    float purchasingPrice = [[purchasingPriceTextField text] floatValue];
-    int termTimeYears = [[termTimeTextField text] intValue];
+    [self performSegueWithIdentifier:@"LoanAmount" sender:self];
+}
+
+- (IBAction)sliderValueChanged:(UISlider *)sender {
+    int dependants = (int)[sender value];
+    dependantsLabel.text = [NSString stringWithFormat:@"%i", dependants];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    LoanAmountViewController *loanAmountVC = (LoanAmountViewController *)[segue destinationViewController];
+    NSArray *values = [NSArray arrayWithObjects:[annualIncomeTextBox text], [annualSalaryTextBox text], [monthlyCreditTextBox text], [dependantsLabel text], nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"ExtraIncome", @"AnnualSalary", @"MonthlyCredits", @"Dependants", nil];
+    NSDictionary *formData = [[NSDictionary alloc] initWithObjects:values forKeys:keys];
+    loanAmountVC.formData = formData;
 }
 
 #pragma mark - UITextFieldDelegate Methods
