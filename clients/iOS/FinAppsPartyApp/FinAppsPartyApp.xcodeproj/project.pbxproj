@@ -31,8 +31,6 @@
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
 		ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
-		ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
-		ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
 		ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */; };
 		ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A68CE163AD80F00EB3648 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
@@ -98,8 +96,8 @@
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		ED0E487C163ACFA1007039BB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCaseOneViewController.h; sourceTree = "<group>"; };
-		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCaseOneViewController.m; sourceTree = "<group>"; };
+		ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UseCaseOneViewController.h; path = /Users/kyledavidson/finapps/clients/iOS/FinAppsPartyApp/FinAppsPartyApp/UseCaseOneViewController.h; sourceTree = "<absolute>"; };
+		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UseCaseOneViewController.m; path = /Users/kyledavidson/finapps/clients/iOS/FinAppsPartyApp/FinAppsPartyApp/UseCaseOneViewController.m; sourceTree = "<absolute>"; };
 		ED4D4EEA163AE85B00F6BDE6 /* MortgageApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MortgageApplicationViewController.h; sourceTree = "<group>"; };
 		ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MortgageApplicationViewController.m; sourceTree = "<group>"; };
 		ED6A68CD163AD80F00EB3648 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
@@ -179,8 +177,6 @@
 				B3E2161C163AD50900091680 /* Providers */,
 				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21548163AA55900091680 /* Supporting Files */,
-				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
-				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
 				ED6A68D2163AD83C00EB3648 /* UseCases */,
 			);
 			path = FinAppsPartyApp;
@@ -423,7 +419,6 @@
 				B3E21552163AA55900091680 /* AppDelegate.m in Sources */,
 				B3E2155B163AA55900091680 /* FinAppsPartyApp.xcdatamodeld in Sources */,
 				ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */,
-				ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
 				B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */,
 				ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */,
 				ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */,
@@ -436,7 +431,6 @@
 			files = (
 				B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */,
 				ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */,
-				ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

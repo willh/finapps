@@ -13,7 +13,8 @@
 @end
 
 @implementation MortgageApplicationViewController
-@synthesize productTypePickerView, purchasingPriceTextField, requestedAmountTextField;
+@synthesize productTypePickerView, purchasingPriceTextField, requestedAmountTextField, applyButton;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +27,8 @@
 
 - (void)viewDidLoad
 {
+    productTypes = [[NSArray alloc] initWithObjects:@"Fixed", @"Tracker and Variable", @"Other", nil];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -35,5 +38,35 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Event handlers
+
+- (IBAction)applyButtonTapped {
+    //do something
+}
+
+
+#pragma mark - Picker View Methods
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [productTypes count];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [productTypes objectAtIndex:row];
+}
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
 
 @end
