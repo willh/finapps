@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/NetworkingEngine.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/CallingEngine.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,7 +17,10 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 @property (readonly, strong, nonatomic) NetworkingEngine *networkingEngine;
+@property (readonly, strong, nonatomic) CallingEngine *callingEngine;
+
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

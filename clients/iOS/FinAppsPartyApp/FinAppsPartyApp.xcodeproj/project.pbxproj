@@ -24,9 +24,13 @@
 		B3E21566163AA55900091680 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E21545163AA55900091680 /* CoreData.framework */; };
 		B3E2156E163AA55900091680 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3E2156C163AA55900091680 /* InfoPlist.strings */; };
 		B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21570163AA55900091680 /* FinAppsPartyAppTests.m */; };
-		B3E215BA163AA60A00091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E215B7163AA5B500091680 /* libFinAppsPartyAppBackend.a */; };
 		B3E215BE163AA80900091680 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E215BD163AA80900091680 /* MainStoryboard.storyboard */; };
 		B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */; };
+		B3E2169C163AFB0D00091680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2169B163AFB0D00091680 /* AVFoundation.framework */; };
+		B3E2169E163AFB1100091680 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2169D163AFB1100091680 /* CFNetwork.framework */; };
+		B3E216A0163AFB1800091680 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2169F163AFB1800091680 /* SystemConfiguration.framework */; };
+		B3E216A2163AFB2500091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216A1163AFB2500091680 /* AudioToolbox.framework */; };
+		B3E216C3163AFBF700091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -43,21 +47,21 @@
 			remoteGlobalIDString = B3E2153A163AA55900091680;
 			remoteInfo = FinAppsPartyApp;
 		};
-		B3E215B6163AA5B500091680 /* PBXContainerItemProxy */ = {
+		B3E216AA163AFBAF00091680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B3E21586163AA5B400091680;
 			remoteInfo = FinAppsPartyAppBackend;
 		};
-		B3E215B8163AA5B500091680 /* PBXContainerItemProxy */ = {
+		B3E216AC163AFBAF00091680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B3E21597163AA5B400091680;
 			remoteInfo = FinAppsPartyAppBackendTests;
 		};
-		B3E215BB163AA61500091680 /* PBXContainerItemProxy */ = {
+		B3E216C1163AFBE700091680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */;
 			proxyType = 1;
@@ -92,6 +96,10 @@
 		B3E215BD163AA80900091680 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B3E2161D163AD52500091680 /* NetworkingEngineProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingEngineProvider.h; sourceTree = "<group>"; };
 		B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingEngineProvider.m; sourceTree = "<group>"; };
+		B3E2169B163AFB0D00091680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B3E2169D163AFB1100091680 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B3E2169F163AFB1800091680 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B3E216A1163AFB2500091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -109,7 +117,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E215BA163AA60A00091680 /* libFinAppsPartyAppBackend.a in Frameworks */,
+				B3E216C3163AFBF700091680 /* libFinAppsPartyAppBackend.a in Frameworks */,
+				B3E216A2163AFB2500091680 /* AudioToolbox.framework in Frameworks */,
+				B3E216A0163AFB1800091680 /* SystemConfiguration.framework in Frameworks */,
+				B3E2169E163AFB1100091680 /* CFNetwork.framework in Frameworks */,
+				B3E2169C163AFB0D00091680 /* AVFoundation.framework in Frameworks */,
 				B3E21540163AA55900091680 /* UIKit.framework in Frameworks */,
 				B3E21542163AA55900091680 /* Foundation.framework in Frameworks */,
 				B3E21544163AA55900091680 /* CoreGraphics.framework in Frameworks */,
@@ -153,6 +165,10 @@
 		B3E2153E163AA55900091680 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3E216A1163AFB2500091680 /* AudioToolbox.framework */,
+				B3E2169F163AFB1800091680 /* SystemConfiguration.framework */,
+				B3E2169D163AFB1100091680 /* CFNetwork.framework */,
+				B3E2169B163AFB0D00091680 /* AVFoundation.framework */,
 				B3E2153F163AA55900091680 /* UIKit.framework */,
 				B3E21541163AA55900091680 /* Foundation.framework */,
 				B3E21543163AA55900091680 /* CoreGraphics.framework */,
@@ -223,15 +239,6 @@
 			name = Backend;
 			sourceTree = "<group>";
 		};
-		B3E215B2163AA5B400091680 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B3E215B7163AA5B500091680 /* libFinAppsPartyAppBackend.a */,
-				B3E215B9163AA5B500091680 /* FinAppsPartyAppBackendTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B3E2161C163AD50900091680 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +246,15 @@
 				B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */,
 			);
 			name = Providers;
+			sourceTree = "<group>";
+		};
+		B3E216A6163AFBAF00091680 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */,
+				B3E216AD163AFBAF00091680 /* FinAppsPartyAppBackendTests.octest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		ED0E4876163ACF70007039BB /* Resources */ = {
@@ -293,7 +309,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B3E215BC163AA61500091680 /* PBXTargetDependency */,
+				B3E216C2163AFBE700091680 /* PBXTargetDependency */,
 			);
 			name = FinAppsPartyApp;
 			productName = FinAppsPartyApp;
@@ -340,7 +356,7 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B3E215B2163AA5B400091680 /* Products */;
+					ProductGroup = B3E216A6163AFBAF00091680 /* Products */;
 					ProjectRef = B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */;
 				},
 			);
@@ -353,18 +369,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B3E215B7163AA5B500091680 /* libFinAppsPartyAppBackend.a */ = {
+		B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libFinAppsPartyAppBackend.a;
-			remoteRef = B3E215B6163AA5B500091680 /* PBXContainerItemProxy */;
+			remoteRef = B3E216AA163AFBAF00091680 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B3E215B9163AA5B500091680 /* FinAppsPartyAppBackendTests.octest */ = {
+		B3E216AD163AFBAF00091680 /* FinAppsPartyAppBackendTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = FinAppsPartyAppBackendTests.octest;
-			remoteRef = B3E215B8163AA5B500091680 /* PBXContainerItemProxy */;
+			remoteRef = B3E216AC163AFBAF00091680 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -442,10 +458,10 @@
 			target = B3E2153A163AA55900091680 /* FinAppsPartyApp */;
 			targetProxy = B3E21567163AA55900091680 /* PBXContainerItemProxy */;
 		};
-		B3E215BC163AA61500091680 /* PBXTargetDependency */ = {
+		B3E216C2163AFBE700091680 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FinAppsPartyAppBackend;
-			targetProxy = B3E215BB163AA61500091680 /* PBXContainerItemProxy */;
+			targetProxy = B3E216C1163AFBE700091680 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -524,8 +540,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinAppsPartyApp/FinAppsPartyApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "FinAppsPartyBackend/**";
 				INFOPLIST_FILE = "FinAppsPartyApp/FinAppsPartyApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "FinAppsPartyApp/FinAppsPartyBackend/**";
 				WRAPPER_EXTENSION = app;
@@ -537,8 +557,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FinAppsPartyApp/FinAppsPartyApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "FinAppsPartyBackend/**";
 				INFOPLIST_FILE = "FinAppsPartyApp/FinAppsPartyApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "FinAppsPartyApp/FinAppsPartyBackend/**";
 				WRAPPER_EXTENSION = app;

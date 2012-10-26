@@ -28,10 +28,6 @@
 		B3E21627163AD86000091680 /* UserError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21626163AD86000091680 /* UserError.m */; };
 		B3E21629163AD8A700091680 /* UserError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21626163AD86000091680 /* UserError.m */; };
 		B3E21649163AE56700091680 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E21648163AE56700091680 /* libTwilioClient.a */; };
-		B3E2164B163AE5C200091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2164A163AE5C200091680 /* AudioToolbox.framework */; };
-		B3E2164D163AE5C700091680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2164C163AE5C700091680 /* AVFoundation.framework */; };
-		B3E2164F163AE5CC00091680 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2164E163AE5CC00091680 /* CFNetwork.framework */; };
-		B3E21651163AE5D600091680 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E21650163AE5D600091680 /* SystemConfiguration.framework */; };
 		B3E21662163AE64100091680 /* disconnect.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E21653163AE64100091680 /* disconnect.wav */; };
 		B3E21663163AE64100091680 /* dtmf_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E21654163AE64100091680 /* dtmf_0.wav */; };
 		B3E21664163AE64100091680 /* dtmf_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E21655163AE64100091680 /* dtmf_1.wav */; };
@@ -48,6 +44,11 @@
 		B3E2166F163AE64100091680 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E21660163AE64100091680 /* incoming.wav */; };
 		B3E21670163AE64100091680 /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = B3E21661163AE64100091680 /* outgoing.wav */; };
 		B3E21673163AE82B00091680 /* TwilioService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21672163AE82B00091680 /* TwilioService.m */; };
+		B3E2168E163AF11600091680 /* CallingEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2168D163AF11600091680 /* CallingEngine.m */; };
+		B3E216CD163B041800091680 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216CC163B041800091680 /* SystemConfiguration.framework */; };
+		B3E216D0163B041D00091680 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216CF163B041D00091680 /* CFNetwork.framework */; };
+		B3E216D2163B042100091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216D1163B042100091680 /* AudioToolbox.framework */; };
+		B3E216D4163B042600091680 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216D3163B042600091680 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,6 @@
 		B3E2158D163AA5B400091680 /* FinAppsPartyAppBackend-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FinAppsPartyAppBackend-Prefix.pch"; sourceTree = "<group>"; };
 		B3E21597163AA5B400091680 /* FinAppsPartyAppBackendTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinAppsPartyAppBackendTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E21598163AA5B400091680 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		B3E2159A163AA5B400091680 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B3E215A2163AA5B400091680 /* FinAppsPartyAppBackendTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinAppsPartyAppBackendTests-Info.plist"; sourceTree = "<group>"; };
 		B3E215A4163AA5B400091680 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B3E215A6163AA5B400091680 /* FinAppsPartyAppBackendTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinAppsPartyAppBackendTests.h; sourceTree = "<group>"; };
@@ -111,10 +111,6 @@
 		B3E21625163AD86000091680 /* UserError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserError.h; sourceTree = "<group>"; };
 		B3E21626163AD86000091680 /* UserError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserError.m; sourceTree = "<group>"; };
 		B3E21648163AE56700091680 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTwilioClient.a; path = Twilio/libTwilioClient.a; sourceTree = "<group>"; };
-		B3E2164A163AE5C200091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B3E2164C163AE5C700091680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B3E2164E163AE5CC00091680 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		B3E21650163AE5D600091680 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B3E21653163AE64100091680 /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = disconnect.wav; path = Libs/Twilio/Resources/disconnect.wav; sourceTree = "<group>"; };
 		B3E21654163AE64100091680 /* dtmf_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = dtmf_0.wav; path = Libs/Twilio/Resources/dtmf_0.wav; sourceTree = "<group>"; };
 		B3E21655163AE64100091680 /* dtmf_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = dtmf_1.wav; path = Libs/Twilio/Resources/dtmf_1.wav; sourceTree = "<group>"; };
@@ -132,6 +128,12 @@
 		B3E21661163AE64100091680 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = outgoing.wav; path = Libs/Twilio/Resources/outgoing.wav; sourceTree = "<group>"; };
 		B3E21671163AE82B00091680 /* TwilioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioService.h; sourceTree = "<group>"; };
 		B3E21672163AE82B00091680 /* TwilioService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwilioService.m; sourceTree = "<group>"; };
+		B3E2168C163AF11600091680 /* CallingEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallingEngine.h; sourceTree = "<group>"; };
+		B3E2168D163AF11600091680 /* CallingEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallingEngine.m; sourceTree = "<group>"; };
+		B3E216CC163B041800091680 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B3E216CF163B041D00091680 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B3E216D1163B042100091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B3E216D3163B042600091680 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +141,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E21651163AE5D600091680 /* SystemConfiguration.framework in Frameworks */,
-				B3E2164F163AE5CC00091680 /* CFNetwork.framework in Frameworks */,
-				B3E2164D163AE5C700091680 /* AVFoundation.framework in Frameworks */,
-				B3E2164B163AE5C200091680 /* AudioToolbox.framework in Frameworks */,
+				B3E216D4163B042600091680 /* AVFoundation.framework in Frameworks */,
+				B3E216D2163B042100091680 /* AudioToolbox.framework in Frameworks */,
+				B3E216D0163B041D00091680 /* CFNetwork.framework in Frameworks */,
+				B3E216CD163B041800091680 /* SystemConfiguration.framework in Frameworks */,
 				B3E2158A163AA5B400091680 /* Foundation.framework in Frameworks */,
 				B3E21649163AE56700091680 /* libTwilioClient.a in Frameworks */,
 			);
@@ -164,6 +166,10 @@
 		B3E2157B163AA5B400091680 = {
 			isa = PBXGroup;
 			children = (
+				B3E216D3163B042600091680 /* AVFoundation.framework */,
+				B3E216D1163B042100091680 /* AudioToolbox.framework */,
+				B3E216CF163B041D00091680 /* CFNetwork.framework */,
+				B3E216CC163B041800091680 /* SystemConfiguration.framework */,
 				B3E2158B163AA5B400091680 /* FinAppsPartyAppBackend */,
 				B3E215A0163AA5B400091680 /* FinAppsPartyAppBackendTests */,
 				B3E21588163AA5B400091680 /* Frameworks */,
@@ -185,13 +191,8 @@
 		B3E21588163AA5B400091680 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2164A163AE5C200091680 /* AudioToolbox.framework */,
-				B3E2164C163AE5C700091680 /* AVFoundation.framework */,
-				B3E2164E163AE5CC00091680 /* CFNetwork.framework */,
 				B3E21589163AA5B400091680 /* Foundation.framework */,
 				B3E21598163AA5B400091680 /* SenTestingKit.framework */,
-				B3E21650163AE5D600091680 /* SystemConfiguration.framework */,
-				B3E2159A163AA5B400091680 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +202,8 @@
 			children = (
 				B3E2160C163ACE3C00091680 /* BaseService.h */,
 				B3E2160D163ACE3C00091680 /* BaseService.m */,
+				B3E2168C163AF11600091680 /* CallingEngine.h */,
+				B3E2168D163AF11600091680 /* CallingEngine.m */,
 				B3E21624163AD86000091680 /* Errors */,
 				B3E2160F163ACF4A00091680 /* LoginService.h */,
 				B3E21610163ACF4A00091680 /* LoginService.m */,
@@ -433,6 +436,7 @@
 				B3E2160E163ACE3C00091680 /* BaseService.m in Sources */,
 				B3E21611163ACF4A00091680 /* LoginService.m in Sources */,
 				B3E21673163AE82B00091680 /* TwilioService.m in Sources */,
+				B3E2168E163AF11600091680 /* CallingEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

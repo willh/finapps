@@ -11,6 +11,7 @@
 
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
+    CallingEngine *_callingEngine;
 }
 
 @end
@@ -28,15 +29,15 @@
     return _networkingEngine;
 }
 
+- (CallingEngine *)callingEngine {
+    if (!_callingEngine) {
+        _callingEngine = [[CallingEngine alloc] initWithNetworkingEngine:[self networkingEngine]];
+    }
+    return _callingEngine;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    TwilioService *service = [[TwilioService alloc] initWithNetworkingEngine:_networkingEngine];
-    [service tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
-        //
-    } failureBlock:^(UserError *error) {
-        //
-    }];
-    
     return YES;
 }
 
