@@ -4,6 +4,108 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="U0G-90-yXU">
+            <objects>
+                <viewController id="Wfo-zv-eaR" customClass="MenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riX-H5-mvN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-k1-cDv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GSu-Ik-Uyz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Call Support" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped" destination="Wfo-zv-eaR" eventType="touchUpInside" id="Hbx-Ea-6fC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pov-Ny-rS8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JNb-6n-RPp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Credit Card application" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped" destination="Wfo-zv-eaR" eventType="touchUpInside" id="2hg-Wc-KTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-N4-Tl2">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Prc-k4-mpS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Insurance Quote" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped" destination="Wfo-zv-eaR" eventType="touchUpInside" id="d9S-x8-pU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-Nm-bi9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Shg-Jt-Nq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Transfer credit" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped" destination="Wfo-zv-eaR" eventType="touchUpInside" id="rm4-nx-K43"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0WG-N4-Tl2" firstAttribute="top" secondItem="pov-Ny-rS8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0GL-ab-E9Q"/>
+                            <constraint firstItem="pov-Ny-rS8" firstAttribute="top" secondItem="i1K-k1-cDv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4y2-En-ZN9"/>
+                            <constraint firstItem="i1K-k1-cDv" firstAttribute="top" secondItem="riX-H5-mvN" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CoR-mB-PYp"/>
+                            <constraint firstItem="5d1-Nm-bi9" firstAttribute="top" secondItem="0WG-N4-Tl2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ndi-eG-c8C"/>
+                            <constraint firstItem="pov-Ny-rS8" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UMx-E1-V0u"/>
+                            <constraint firstItem="5d1-Nm-bi9" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UNk-ZJ-mKD"/>
+                            <constraint firstAttribute="trailing" secondItem="pov-Ny-rS8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ul9-1q-jBY"/>
+                            <constraint firstItem="i1K-k1-cDv" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Y8C-Xp-sro"/>
+                            <constraint firstAttribute="trailing" secondItem="i1K-k1-cDv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fFj-lr-SIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="0WG-N4-Tl2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fbZ-k3-tnP"/>
+                            <constraint firstAttribute="trailing" secondItem="5d1-Nm-bi9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="thI-0n-atp"/>
+                            <constraint firstItem="0WG-N4-Tl2" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yy8-68-nYw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ke-PF-DeS"/>
+                    <connections>
+                        <outlet property="callSupportButton" destination="i1K-k1-cDv" id="ugz-HA-bli"/>
+                        <outlet property="cardApplicationCaseButton" destination="pov-Ny-rS8" id="0E3-07-Ovz"/>
+                        <outlet property="insuranceQuoteCaseButton" destination="0WG-N4-Tl2" id="8ko-ZI-few"/>
+                        <outlet property="transferCreditCaseButton" destination="5d1-Nm-bi9" id="VIX-6x-vJ6"/>
+                        <segue destination="hKY-xZ-e4v" kind="push" identifier="UseCaseOne" id="QB7-oL-7z3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGf-Qu-kJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181" y="34"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="8ur-tS-fwl">
             <objects>
@@ -95,53 +197,27 @@
                         <outlet property="submitLoginButton" destination="UBN-jz-jD8" id="krK-o4-Um6"/>
                         <outlet property="usernameMessageLabel" destination="R9F-1u-OF4" id="AmT-5B-Qlv"/>
                         <outlet property="usernameTextField" destination="1de-b0-qUm" id="rJs-r8-nNM"/>
-                        <segue destination="hKY-xZ-e4v" kind="push" identifier="UseCaseOne" id="mHt-WZ-DFn"/>
+                        <segue destination="Wfo-zv-eaR" kind="push" identifier="Menu" id="fxD-T7-jOc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-PC-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="26"/>
+            <point key="canvasLocation" x="736" y="34"/>
         </scene>
         <!--Use Case One View Controller-->
         <scene sceneID="ool-Tc-bIe">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-dl-gz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="hKY-xZ-e4v" customClass="UseCaseOneViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V8G-l2-te1">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMo-cW-bRk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="NmH-H4-zHI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Call" backgroundImage="Button.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="callButtonTapped" destination="hKY-xZ-e4v" eventType="touchUpInside" id="Mcg-Df-vbn"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="iMo-cW-bRk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Nf5-SP-Agm"/>
-                            <constraint firstItem="iMo-cW-bRk" firstAttribute="leading" secondItem="V8G-l2-te1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OEL-bZ-xak"/>
-                            <constraint firstAttribute="bottom" secondItem="iMo-cW-bRk" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xMn-lv-21A"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ft5-BZ-2l9"/>
-                    <connections>
-                        <outlet property="callButton" destination="iMo-cW-bRk" id="XEo-R3-G0l"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-dl-gz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1093" y="26"/>
+            <point key="canvasLocation" x="1615" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BLx-t0-PyQ">
@@ -165,29 +241,6 @@
     <resources>
         <image name="Button.png" width="162" height="42"/>
     </resources>
-    <classes>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTapped:"/>
-                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UseCaseOneViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseCaseOneViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

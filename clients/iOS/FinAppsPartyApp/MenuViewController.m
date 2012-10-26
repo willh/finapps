@@ -1,18 +1,19 @@
 //
-//  UseCaseOneViewController.m
+//  MenuViewController.m
 //  FinAppsPartyApp
 //
 //  Created by Kyle Davidson on 26/10/2012.
 //  Copyright (c) 2012 Tomasz Janeczko. All rights reserved.
 //
 
-#import "UseCaseOneViewController.h"
+#import "MenuViewController.h"
 
-@interface UseCaseOneViewController ()
+@interface MenuViewController ()
 
 @end
 
-@implementation UseCaseOneViewController
+@implementation MenuViewController
+@synthesize callSupportButton, transferCreditCaseButton, cardApplicationCaseButton, insuranceQuoteCaseButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,5 +35,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Event handlers
+- (IBAction)buttonTapped:(id)sender {
+    
+}
+
 
 @end

@@ -63,7 +63,7 @@
                                  
         [service loginWithUsername:username password:password successBlock:^(NSString *token) {
             
-            [self performSegueWithIdentifier:@"UseCaseOne" sender:self];
+            [self performSegueWithIdentifier:@"Menu" sender:self];
             
         } failureBlock:^(UserError *error) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:error.title message:error.message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];

@@ -33,6 +33,7 @@
 		ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
 		ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
 		ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
+		ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A68CE163AD80F00EB3648 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		ED0E487C163ACFA1007039BB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCaseOneViewController.h; sourceTree = "<group>"; };
 		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCaseOneViewController.m; sourceTree = "<group>"; };
+		ED6A68CD163AD80F00EB3648 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
+		ED6A68CE163AD80F00EB3648 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,9 @@
 		B3E21547163AA55900091680 /* FinAppsPartyApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED6A68D1163AD82F00EB3648 /* MenuScreen */,
+				ED6A68D0163AD82100EB3648 /* LoginScreen */,
+				ED6A68D2163AD83C00EB3648 /* UseCases */,
 				B3E21550163AA55900091680 /* AppDelegate.h */,
 				B3E21551163AA55900091680 /* AppDelegate.m */,
 				B3E2157A163AA57C00091680 /* Backend */,
@@ -243,6 +249,33 @@
 				ED0E4878163ACF88007039BB /* Button@2x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		ED6A68D0163AD82100EB3648 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
+				ED0E487C163ACFA1007039BB /* LoginViewController.m */,
+			);
+			name = LoginScreen;
+			sourceTree = "<group>";
+		};
+		ED6A68D1163AD82F00EB3648 /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED6A68CD163AD80F00EB3648 /* MenuViewController.h */,
+				ED6A68CE163AD80F00EB3648 /* MenuViewController.m */,
+			);
+			name = MenuScreen;
+			sourceTree = "<group>";
+		};
+		ED6A68D2163AD83C00EB3648 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
+				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
+			);
+			name = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +420,7 @@
 				ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */,
 				ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
 				B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */,
+				ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

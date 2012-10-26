@@ -8,10 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UseCaseOneViewController : UIViewController {
-    UIButton *callButton;
-}
-
-@property(nonatomic, retain) IBOutlet UIButton *callButton;
-
+@interface UseCaseOneViewController : UIViewController
 @end
