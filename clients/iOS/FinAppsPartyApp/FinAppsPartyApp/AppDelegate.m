@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
@@ -30,6 +30,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    TwilioService *service = [[TwilioService alloc] initWithNetworkingEngine:_networkingEngine];
+    [service tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
+        //
+    } failureBlock:^(UserError *error) {
+        //
+    }];
+    
     return YES;
 }
 

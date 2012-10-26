@@ -167,21 +167,21 @@
 		B3E21547163AA55900091680 /* FinAppsPartyApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED6A68D1163AD82F00EB3648 /* MenuScreen */,
-				ED6A68D0163AD82100EB3648 /* LoginScreen */,
-				ED6A68D2163AD83C00EB3648 /* UseCases */,
 				B3E21550163AA55900091680 /* AppDelegate.h */,
 				B3E21551163AA55900091680 /* AppDelegate.m */,
 				B3E2157A163AA57C00091680 /* Backend */,
 				B3E21559163AA55900091680 /* FinAppsPartyApp.xcdatamodeld */,
+				ED6A68D0163AD82100EB3648 /* LoginScreen */,
 				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
 				ED0E487C163ACFA1007039BB /* LoginViewController.m */,
 				B3E215BD163AA80900091680 /* MainStoryboard.storyboard */,
+				ED6A68D1163AD82F00EB3648 /* MenuScreen */,
 				B3E2161C163AD50900091680 /* Providers */,
 				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21548163AA55900091680 /* Supporting Files */,
 				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
 				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
+				ED6A68D2163AD83C00EB3648 /* UseCases */,
 			);
 			path = FinAppsPartyApp;
 			sourceTree = "<group>";
@@ -533,7 +533,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "FinAppsPartyApp/FinAppsPartyApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "FinAppsPartyBackend/**";
+				USER_HEADER_SEARCH_PATHS = "FinAppsPartyApp/FinAppsPartyBackend/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -546,7 +546,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "FinAppsPartyApp/FinAppsPartyApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "FinAppsPartyBackend/**";
+				USER_HEADER_SEARCH_PATHS = "FinAppsPartyApp/FinAppsPartyBackend/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

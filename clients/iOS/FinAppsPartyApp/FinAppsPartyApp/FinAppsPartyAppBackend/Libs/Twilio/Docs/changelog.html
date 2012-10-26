@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Twilio Client iOS Changes</title>
+    <link rel="stylesheet" href="../assets/docs-style.css">
+    <link rel="stylesheet" href="../assets/syntaxhighlighter/shCore.css">
+    <link rel="stylesheet" href="../assets/syntaxhighlighter/shThemeDefault.css">
+    <script type="text/javascript" src="../assets/syntaxhighlighter/shCore.js"></script>
+    <script type="text/javascript" src="../assets/syntaxhighlighter/shBrushJava.js"></script>
+    <script type="text/javascript" src="../assets/syntaxhighlighter/shBrushObjC.js"></script>
+    <script type="text/javascript" src="../assets/syntaxhighlighter/shBrushPhp.js"></script>
+    <script type="text/javascript" src="../assets/syntaxhighlighter/shBrushXml.js"></script>
+</head>
+<body>
+
+<div id="header">
+    <div id="header-logo">
+        <img src="../assets/twilio-header-logo.png" alt="Twilio">
+    </div>
+</div>
+
+<div id="content">
+
+<h1 id="twilio-client-ios-changes">Twilio Client iOS Changes</h1>
+
+<h2 id="sep-2012">1.1.0 (19 Sep 2012)</h2>
+
+<h3 id="new-features">New Features</h3>
+
+<ul>
+  <li>Increase keepalive interval to bring down device wakeups and reduce
+idle network usage.</li>
+  <li>Use the Speex wideband codec rather than narrowband, which should
+result in better voice quality at the expense of slightly greater
+in-call network usage.</li>
+  <li>Signalling will now recover after switching between WiFi and mobile
+data (or between different WiFi networks), so if the other party hangs
+up, the mobile device will receive the notification.</li>
+  <li>The CoreAudio session category is now remembered before a call is
+placed, and restored after the call terminates.</li>
+</ul>
+
+<h3 id="bug-fixes">Bug Fixes</h3>
+
+<ul>
+  <li>Fixed a problem where incoming call notification wouldn&rsquo;t work if the
+<code>TCDevice</code> instance was created from a non-main thread.</li>
+  <li>Fixed an intermittent crash that could occur when network reachability
+status changes.</li>
+  <li>Fixed a possible crash when updating the capability token on an
+existing <code>TCDevice</code>.</li>
+  <li>Fixed an internal reference cycle that could make it impossible to
+release a <code>TCDevice</code> instance.</li>
+  <li>Fixed a case where a connection <code>disconnect</code> immediately after a
+<code>connect</code> could sometimes still allow the call to be placed.  In
+some other cases this would result in the connection delegate&rsquo;s
+<code>connection:didFailWithError:</code> method being called with an error
+reported.  This is now just reported as a non-error
+<code>connectionDidDisconnect:</code>.</li>
+</ul>
+
+<h3 id="api-changes">API Changes</h3>
+
+<p>(none)</p>
+
+<h2 id="feb-2012">1.0.0 (23 Feb 2012)</h2>
+
+<p>Initial release.</p>
+</div>
+
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['auto-links'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.config.space=' ';
+    SyntaxHighlighter.all();
+</script>
+
+</body>
+</html>
