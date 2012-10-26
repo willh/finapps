@@ -26,6 +26,7 @@
 		B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21570163AA55900091680 /* FinAppsPartyAppTests.m */; };
 		B3E215BA163AA60A00091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E215B7163AA5B500091680 /* libFinAppsPartyAppBackend.a */; };
 		B3E215BE163AA80900091680 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E215BD163AA80900091680 /* MainStoryboard.storyboard */; };
+		B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -89,6 +90,8 @@
 		B3E21570163AA55900091680 /* FinAppsPartyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinAppsPartyAppTests.m; sourceTree = "<group>"; };
 		B3E215B1163AA5B400091680 /* FinAppsPartyAppBackend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FinAppsPartyAppBackend.xcodeproj; path = FinAppsPartyAppBackend/FinAppsPartyAppBackend.xcodeproj; sourceTree = "<group>"; };
 		B3E215BD163AA80900091680 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B3E2161D163AD52500091680 /* NetworkingEngineProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingEngineProvider.h; sourceTree = "<group>"; };
+		B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingEngineProvider.m; sourceTree = "<group>"; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -158,17 +161,18 @@
 		B3E21547163AA55900091680 /* FinAppsPartyApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
-				ED0E487C163ACFA1007039BB /* LoginViewController.m */,
-				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
-				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
-				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21550163AA55900091680 /* AppDelegate.h */,
 				B3E21551163AA55900091680 /* AppDelegate.m */,
 				B3E2157A163AA57C00091680 /* Backend */,
 				B3E21559163AA55900091680 /* FinAppsPartyApp.xcdatamodeld */,
+				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
+				ED0E487C163ACFA1007039BB /* LoginViewController.m */,
 				B3E215BD163AA80900091680 /* MainStoryboard.storyboard */,
+				B3E2161C163AD50900091680 /* Providers */,
+				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21548163AA55900091680 /* Supporting Files */,
+				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
+				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
 			);
 			path = FinAppsPartyApp;
 			sourceTree = "<group>";
@@ -221,6 +225,15 @@
 				B3E215B9163AA5B500091680 /* FinAppsPartyAppBackendTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3E2161C163AD50900091680 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B3E2161D163AD52500091680 /* NetworkingEngineProvider.h */,
+				B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 		ED0E4876163ACF70007039BB /* Resources */ = {
@@ -373,6 +386,7 @@
 				B3E2155B163AA55900091680 /* FinAppsPartyApp.xcdatamodeld in Sources */,
 				ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */,
 				ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */,
+				B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

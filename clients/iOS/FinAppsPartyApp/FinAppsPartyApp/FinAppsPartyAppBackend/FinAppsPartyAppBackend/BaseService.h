@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Errors/UserError.h"
+
+typedef void(^ServiceFailureBlock)(UserError *error);
 
 @interface BaseService : NSObject {
 

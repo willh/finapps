@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "UseCaseOneViewController.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
 
 @interface LoginViewController ()
 
@@ -54,7 +55,20 @@
         [alert show];
     } else {
         //some verification
-        [self performSegueWithIdentifier:@"UseCaseOne" sender:self];
+        
+        NSString *username = usernameTextField.text;
+        NSString *password = passwordTextField.text;
+        
+        LoginService *service = [[LoginService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+                                 
+        [service loginWithUsername:username password:password successBlock:^(NSString *token) {
+            
+            [self performSegueWithIdentifier:@"UseCaseOne" sender:self];
+            
+        } failureBlock:^(UserError *error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:error.title message:error.message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alertView show];
+        }];
     }
 
 }

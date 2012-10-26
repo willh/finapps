@@ -29,6 +29,8 @@
     if (self = [super init]) {
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", endpoint, apiKey]];
         _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+        [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
+        
     }
     
     return self;

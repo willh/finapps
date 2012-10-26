@@ -10,13 +10,23 @@
 
 @implementation LoginService
 
-- (void)loginWithUsername:(NSString *)userName password:(NSString *)password successBlock:(LoginSuccessfulBlock)successBlock failureBlock:(FailureBlock)failureBlock {
+- (void)loginWithUsername:(NSString *)userName password:(NSString *)password successBlock:(LoginSuccessfulBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
     
     [_engine setAuthenticationHeadersWithUsername:userName password:password];
     [_engine invokeGETRequestWithPath:@"access/login" params:nil successBlock:^(NSDictionary *responseData) {
-        NSLog(@"Login dict: %@", responseData);
+        successBlock([responseData valueForKey:@"token"]);
     } failureBlock:^(NSError *error) {
-        NSLog(@"DAMN IT! %@", error);
+        
+        UserError *userError = [UserError new];
+        if (error.code == -1011) { //AFNetworking Domain Code for failed auth
+            userError.title = @"Login failed";
+            userError.message = @"Please check your credentials";
+            
+            failureBlock(userError);
+        } else {
+            userError.title = @"Error";
+            userError.message = [error description];
+        }
     }];
 }
 

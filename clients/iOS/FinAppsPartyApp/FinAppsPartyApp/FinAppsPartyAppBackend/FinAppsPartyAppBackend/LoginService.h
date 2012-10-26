@@ -12,6 +12,6 @@ typedef void(^LoginSuccessfulBlock)(NSString *token);
 
 @interface LoginService : BaseService
 
-- (void)loginWithUsername:(NSString *)userName password:(NSString *)password successBlock:(LoginSuccessfulBlock)successBlock failureBlock:(FailureBlock)failureBlock;
+- (void)loginWithUsername:(NSString *)userName password:(NSString *)password successBlock:(LoginSuccessfulBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock;
 
 @end

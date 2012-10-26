@@ -25,6 +25,8 @@
 		B3E215F3163ABF6B00091680 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E215EA163ABF6B00091680 /* UIImageView+AFNetworking.m */; };
 		B3E2160E163ACE3C00091680 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2160D163ACE3C00091680 /* BaseService.m */; };
 		B3E21611163ACF4A00091680 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21610163ACF4A00091680 /* LoginService.m */; };
+		B3E21627163AD86000091680 /* UserError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21626163AD86000091680 /* UserError.m */; };
+		B3E21629163AD8A700091680 /* UserError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21626163AD86000091680 /* UserError.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		B3E2160D163ACE3C00091680 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		B3E2160F163ACF4A00091680 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
 		B3E21610163ACF4A00091680 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
+		B3E21625163AD86000091680 /* UserError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserError.h; sourceTree = "<group>"; };
+		B3E21626163AD86000091680 /* UserError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserError.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,13 +146,14 @@
 		B3E2158B163AA5B400091680 /* FinAppsPartyAppBackend */ = {
 			isa = PBXGroup;
 			children = (
-				B3E2158C163AA5B400091680 /* Supporting Files */,
-				B3E215D4163AB08B00091680 /* NetworkingEngine.h */,
-				B3E215D5163AB08B00091680 /* NetworkingEngine.m */,
 				B3E2160C163ACE3C00091680 /* BaseService.h */,
 				B3E2160D163ACE3C00091680 /* BaseService.m */,
+				B3E21624163AD86000091680 /* Errors */,
 				B3E2160F163ACF4A00091680 /* LoginService.h */,
 				B3E21610163ACF4A00091680 /* LoginService.m */,
+				B3E215D4163AB08B00091680 /* NetworkingEngine.h */,
+				B3E215D5163AB08B00091680 /* NetworkingEngine.m */,
+				B3E2158C163AA5B400091680 /* Supporting Files */,
 			);
 			path = FinAppsPartyAppBackend;
 			sourceTree = "<group>";
@@ -204,6 +209,15 @@
 				B3E215EA163ABF6B00091680 /* UIImageView+AFNetworking.m */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		B3E21624163AD86000091680 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B3E21625163AD86000091680 /* UserError.h */,
+				B3E21626163AD86000091680 /* UserError.m */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E21629163AD8A700091680 /* UserError.m in Sources */,
 				B3E215D6163AB08B00091680 /* NetworkingEngine.m in Sources */,
 				B3E215EB163ABF6B00091680 /* AFHTTPClient.m in Sources */,
 				B3E215EC163ABF6B00091680 /* AFHTTPRequestOperation.m in Sources */,
@@ -324,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E215A8163AA5B400091680 /* FinAppsPartyAppBackendTests.m in Sources */,
+				B3E21627163AD86000091680 /* UserError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
