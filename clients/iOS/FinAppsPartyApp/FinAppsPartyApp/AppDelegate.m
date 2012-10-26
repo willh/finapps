@@ -143,7 +143,8 @@
          * Simply deleting the existing store:
          */
          
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        [self persistentStoreCoordinator];
         
         /*
         

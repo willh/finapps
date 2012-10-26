@@ -78,6 +78,7 @@
                     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
         
                     user.userId = userId;
+                    user.createdAt = [NSDate date];
                     
                     return YES;
                 }];
