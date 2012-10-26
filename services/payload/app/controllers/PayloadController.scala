@@ -4,6 +4,7 @@ import play.api._
 import libs.json.Json
 import play.api.mvc._
 import com.mongodb.casbah.Imports._
+import AppConfig.PayloadConfig
 
 object PayloadController extends Controller {
 
@@ -32,7 +33,7 @@ object PayloadController extends Controller {
   def getPayload(token: Option[String]) = Action {
     token.map { idToken =>
       val responseMap = Map("data" -> get(idToken))
-      Ok(Json.toJson(responseMap))
+      Ok(Json.toJson(responseMap)).as("application/json")
     }.getOrElse {
       BadRequest("Expecting token parameter")
     }
@@ -40,7 +41,7 @@ object PayloadController extends Controller {
   }
 
   private def get(token: String): String = {
-    val mongoConn = MongoConnection()
+    val mongoConn = MongoConnection(PayloadConfig.getMongoURL)
     val mongoColl = mongoConn("finapps")("payload")
     val query = MongoDBObject("token" -> token)
 
