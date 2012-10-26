@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="Wfo-zv-eaR" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riX-H5-mvN">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-k1-cDv">
@@ -71,7 +71,7 @@
             <objects>
                 <viewController id="BMH-Dc-n51" customClass="MortgageApplicationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6KF-ed-gxS">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is your basic annual salary? (€)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-d1-gMM">
@@ -204,7 +204,7 @@
             <objects>
                 <viewController id="yUv-8j-Ljh" customClass="LoanAmountViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5S-2P-9rq">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -305,7 +305,7 @@
                         <outlet property="submitLoginButton" destination="UBN-jz-jD8" id="krK-o4-Um6"/>
                         <outlet property="usernameMessageLabel" destination="R9F-1u-OF4" id="AmT-5B-Qlv"/>
                         <outlet property="usernameTextField" destination="1de-b0-qUm" id="rJs-r8-nNM"/>
-                        <segue destination="Wfo-zv-eaR" kind="custom" identifier="Menu" customClass="ReplaceSegue" id="r6B-v0-hZc"/>
+                        <segue destination="DLm-Dx-IuP" kind="custom" identifier="Menu" customClass="ReplaceSegue" id="9zq-3b-cgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-PC-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -359,7 +359,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="r6B-v0-hZc"/>
-    </inferredMetricsTieBreakers>
 </document>

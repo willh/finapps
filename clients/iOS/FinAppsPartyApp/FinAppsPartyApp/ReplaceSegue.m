@@ -11,12 +11,24 @@
 @implementation ReplaceSegue
 
 -(void) perform {
+    
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
     UIViewController *srcViewController = (UIViewController *) self.sourceViewController;
     UIViewController *destViewController = (UIViewController *) self.destinationViewController;
-    [srcViewController.view removeFromSuperview];
-  
-    appDelegate.window.rootViewController=destViewController;
+    [UIView transitionFromView:srcViewController.view
+                        toView:destViewController.view
+                      duration:1
+                       options:UIViewAnimationOptionTransitionFlipFromBottom
+                    completion:^(BOOL complete) {
+                        [srcViewController.view removeFromSuperview];
+                        appDelegate.window.rootViewController = destViewController;
+                        
+                    }];
+
+
+
+
 }
 
 
