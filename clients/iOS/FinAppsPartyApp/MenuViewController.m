@@ -12,6 +12,11 @@
 
 @end
 
+int const CallSupportCase = 0;
+int const CreditCardCase = 1;
+int const InsuranceQuoteCase = 2;
+int const TransferCreditCase = 3;
+
 @implementation MenuViewController
 @synthesize callSupportButton, transferCreditCaseButton, cardApplicationCaseButton, insuranceQuoteCaseButton;
 
@@ -38,6 +43,24 @@
 
 #pragma mark - Event handlers
 - (IBAction)buttonTapped:(id)sender {
+    int button = [(UIButton*)sender tag];
+    
+    switch (button) {
+        case CallSupportCase:
+            NSLog(@"Call support hit");
+            break;
+        case CreditCardCase:
+            NSLog(@"Credit card hit");
+            break;
+        case InsuranceQuoteCase:
+            NSLog(@"Insurance quote hit");
+            break;
+        case TransferCreditCase:
+            NSLog(@"Transfer credit hit");
+            break;
+        default:
+            break;
+    }
     
 }
 
