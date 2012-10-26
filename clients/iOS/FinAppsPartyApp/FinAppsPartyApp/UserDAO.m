@@ -10,6 +10,15 @@
 
 @implementation UserDAO
 
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)moc {
+    self = [super initWithManagedObjectContext:moc andEntityName:@"User"];
+    if (self) {
+        //
+    }
+    
+    return self;
+}
+
 - (User *)recentUser {
     NSFetchRequest *fetchRequest = [self fetchRequest];
     [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:NO]]];

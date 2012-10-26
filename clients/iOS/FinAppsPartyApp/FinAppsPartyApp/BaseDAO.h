@@ -10,6 +10,7 @@
 
 @interface BaseDAO : NSObject
 
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)moc;
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)moc andEntityName:(NSString *)entityName;
 - (NSFetchRequest *)fetchRequest;
 - (NSManagedObjectContext *)managedObjectContext;

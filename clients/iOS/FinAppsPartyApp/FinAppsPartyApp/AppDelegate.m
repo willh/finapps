@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
+#import "UserDAO.h"
 #import "BaseDAO.h"
 
 @interface AppDelegate() {

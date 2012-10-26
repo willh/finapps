@@ -17,6 +17,11 @@
 
 @implementation BaseDAO
 
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)moc {
+    [NSException raise:@"AbstractClassException" format:@"Override in subclass!"];
+    return nil;
+}
+
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)moc andEntityName:(NSString *)entityName {
     self = [super init];
     if (self) {
