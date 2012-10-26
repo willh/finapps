@@ -126,11 +126,65 @@
                         <outlet property="insuranceQuoteCaseButton" destination="0WG-N4-Tl2" id="8ko-ZI-few"/>
                         <outlet property="transferCreditCaseButton" destination="5d1-Nm-bi9" id="VIX-6x-vJ6"/>
                         <segue destination="NqJ-vV-Vem" kind="push" identifier="CreditCardApplication" id="oa1-sv-E5c"/>
+                        <segue destination="P8D-oC-Ppv" kind="push" identifier="TransferCredit" id="5aD-Iv-ikt"/>
+                        <segue destination="LE5-o9-qzE" kind="push" identifier="InsuranceQuote" id="T8n-Wt-zBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGf-Qu-kJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1261" y="34"/>
+        </scene>
+        <!--Transfer Credit View Controller-->
+        <scene sceneID="sOB-H5-X9C">
+            <objects>
+                <viewController id="P8D-oC-Ppv" customClass="TransferCreditViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aES-8d-KW2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Transfer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpK-1l-GiH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HpK-1l-GiH" firstAttribute="leading" secondItem="aES-8d-KW2" secondAttribute="leading" constant="119" id="FRb-OQ-5lQ"/>
+                            <constraint firstAttribute="bottom" secondItem="HpK-1l-GiH" secondAttribute="bottom" constant="223" id="aT6-wa-4rm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WPM-J9-mkj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r70-sd-noz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="-679"/>
+        </scene>
+        <!--Insurance Quote View Controller-->
+        <scene sceneID="TR8-dr-idV">
+            <objects>
+                <viewController id="LE5-o9-qzE" customClass="InsuranceQuoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="at5-t1-Id1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Insurance Quote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2A-9A-4e7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y2A-9A-4e7" firstAttribute="top" secondItem="at5-t1-Id1" secondAttribute="top" constant="194" id="59F-hp-UfR"/>
+                            <constraint firstItem="y2A-9A-4e7" firstAttribute="leading" secondItem="at5-t1-Id1" secondAttribute="leading" constant="103" id="akZ-l6-Xnq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IFJ-Z8-hl8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDF-0g-RWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2129" y="-664"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8ur-tS-fwl">
@@ -252,6 +306,42 @@
     <resources>
         <image name="Button.png" width="162" height="42"/>
     </resources>
+    <classes>
+        <class className="CreditCardApplicationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreditCardApplicationViewController.h"/>
+        </class>
+        <class className="InsuranceQuoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InsuranceQuoteViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTapped:"/>
+                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonTapped:"/>
+                <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="cardApplicationCaseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="insuranceQuoteCaseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="transferCreditCaseButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TransferCreditViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TransferCreditViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -34,6 +34,8 @@
 		ED0E4881163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
 		ED0E4882163ACFA1007039BB /* UseCaseOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */; };
 		ED4D4EE3163AE11B00F6BDE6 /* CreditCardApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D4EE2163AE11B00F6BDE6 /* CreditCardApplicationViewController.m */; };
+		ED4D4EE6163AE2DB00F6BDE6 /* TransferCreditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D4EE5163AE2DB00F6BDE6 /* TransferCreditViewController.m */; };
+		ED4D4EE9163AE2EC00F6BDE6 /* InsuranceQuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4D4EE8163AE2EC00F6BDE6 /* InsuranceQuoteViewController.m */; };
 		ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6A68CE163AD80F00EB3648 /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,10 @@
 		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCaseOneViewController.m; sourceTree = "<group>"; };
 		ED4D4EE1163AE11B00F6BDE6 /* CreditCardApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreditCardApplicationViewController.h; path = ../CreditCardApplicationViewController.h; sourceTree = "<group>"; };
 		ED4D4EE2163AE11B00F6BDE6 /* CreditCardApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreditCardApplicationViewController.m; path = ../CreditCardApplicationViewController.m; sourceTree = "<group>"; };
+		ED4D4EE4163AE2DB00F6BDE6 /* TransferCreditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferCreditViewController.h; sourceTree = "<group>"; };
+		ED4D4EE5163AE2DB00F6BDE6 /* TransferCreditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferCreditViewController.m; sourceTree = "<group>"; };
+		ED4D4EE7163AE2EC00F6BDE6 /* InsuranceQuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsuranceQuoteViewController.h; sourceTree = "<group>"; };
+		ED4D4EE8163AE2EC00F6BDE6 /* InsuranceQuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsuranceQuoteViewController.m; sourceTree = "<group>"; };
 		ED6A68CD163AD80F00EB3648 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
 		ED6A68CE163AD80F00EB3648 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ../MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -279,6 +285,10 @@
 				ED4D4EE2163AE11B00F6BDE6 /* CreditCardApplicationViewController.m */,
 				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
 				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
+				ED4D4EE4163AE2DB00F6BDE6 /* TransferCreditViewController.h */,
+				ED4D4EE5163AE2DB00F6BDE6 /* TransferCreditViewController.m */,
+				ED4D4EE7163AE2EC00F6BDE6 /* InsuranceQuoteViewController.h */,
+				ED4D4EE8163AE2EC00F6BDE6 /* InsuranceQuoteViewController.m */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -427,6 +437,8 @@
 				B3E2161F163AD52500091680 /* NetworkingEngineProvider.m in Sources */,
 				ED6A68CF163AD80F00EB3648 /* MenuViewController.m in Sources */,
 				ED4D4EE3163AE11B00F6BDE6 /* CreditCardApplicationViewController.m in Sources */,
+				ED4D4EE6163AE2DB00F6BDE6 /* TransferCreditViewController.m in Sources */,
+				ED4D4EE9163AE2EC00F6BDE6 /* InsuranceQuoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
