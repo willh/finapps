@@ -13,8 +13,7 @@
 @end
 
 @implementation MortgageApplicationViewController
-@synthesize productTypePickerView, purchasingPriceTextField, requestedAmountTextField, applyButton;
-@synthesize scrollView;
+@synthesize purchasingPriceTextField, requestedAmountTextField, termTimeTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +27,7 @@
 - (void)viewDidLoad
 {
     productTypes = [[NSArray alloc] initWithObjects:@"Fixed", @"Tracker and Variable", @"Other", nil];
-    
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -42,22 +41,9 @@
 #pragma mark - Event handlers
 
 - (IBAction)applyButtonTapped {
-    //do something
-}
-
-
-#pragma mark - Picker View Methods
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return [productTypes count];
-}
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [productTypes objectAtIndex:row];
+    float amountRequested = [[requestedAmountTextField text] floatValue];
+    float purchasingPrice = [[purchasingPriceTextField text] floatValue];
+    int termTimeYears = [[termTimeTextField text] intValue];
 }
 
 #pragma mark - UITextFieldDelegate Methods

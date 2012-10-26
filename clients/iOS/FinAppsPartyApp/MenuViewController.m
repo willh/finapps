@@ -64,7 +64,6 @@ int const MortgageApplicationCase = 1;
         }
             break;
         case MortgageApplicationCase:
-            NSLog(@"Insurance quote hit");
             [self performSegueWithIdentifier:@"MortgageApplication" sender:self];
             break;
         default:
