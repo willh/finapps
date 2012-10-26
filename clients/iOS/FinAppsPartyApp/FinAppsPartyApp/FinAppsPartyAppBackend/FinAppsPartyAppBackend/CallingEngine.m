@@ -45,6 +45,7 @@
 
 - (void)disconnect {
     [_tcConnection disconnect];
+    [_tcDevice disconnectAll];
     _tcConnection = nil;
 }
 

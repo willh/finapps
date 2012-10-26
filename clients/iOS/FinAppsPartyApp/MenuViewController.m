@@ -8,7 +8,9 @@
 
 #import "MenuViewController.h"
 
-@interface MenuViewController ()
+@interface MenuViewController () {
+    BOOL _isCalling;
+}
 
 @end
 
@@ -22,7 +24,7 @@ int const MortgageApplicationCase = 1;
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        _isCalling = NO;
     }
     return self;
 }
@@ -44,7 +46,22 @@ int const MortgageApplicationCase = 1;
     int button = [(UIButton*)sender tag];
     switch (button) {
         case CallSupportCase:
-            NSLog(@"Call support hit");
+        {
+            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+            CallingEngine *callingEngine = [appDelegate callingEngine];
+            
+            UIButton *senderButton = (UIButton *)sender;
+            
+            if (!_isCalling) {
+                [callingEngine connect:@"+442033221655"];
+                [senderButton setTitle:@"Disconnect" forState:UIControlStateNormal];
+                _isCalling = YES;
+            } else {
+                [callingEngine disconnect];
+                [senderButton setTitle:@"Call Support" forState:UIControlStateNormal];
+                _isCalling = NO;
+            }
+        }
             break;
         case MortgageApplicationCase:
             NSLog(@"Insurance quote hit");
