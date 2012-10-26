@@ -18,8 +18,8 @@ typedef void(^FailureBlock)(NSError *error);
 - (id)initWithEndpoint:(NSString *)endpoint apiKey:(NSString *)apiKey;
 
 - (void)setAuthenticationHeadersWithUsername:(NSString *)username password:(NSString *)password;
-
 - (void)setHeaders:(NSDictionary *)headers;
+- (void)setSecurityToken:(NSString *)token;
 
 - (void)invokeGETRequestWithPath:(NSString *)path params:(NSDictionary *)params successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock;
 

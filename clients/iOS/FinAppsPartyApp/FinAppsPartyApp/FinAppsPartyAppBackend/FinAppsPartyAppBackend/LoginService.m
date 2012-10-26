@@ -14,7 +14,12 @@
     
     [_engine setAuthenticationHeadersWithUsername:userName password:password];
     [_engine invokeGETRequestWithPath:@"access/login" params:nil successBlock:^(NSDictionary *responseData) {
-        successBlock([responseData valueForKey:@"token"]);
+        NSString *token = [responseData valueForKey:@"token"];
+        
+        // Set the security token in the Networking Engine
+        [_engine setSecurityToken:token];
+        
+        successBlock(token);
     } failureBlock:^(NSError *error) {
         
         UserError *userError = [UserError new];

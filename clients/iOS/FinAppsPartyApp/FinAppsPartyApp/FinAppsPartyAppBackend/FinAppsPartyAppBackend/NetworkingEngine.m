@@ -11,6 +11,8 @@
 
 @interface NetworkingEngine() {
     AFHTTPClient *_httpClient;
+    
+    NSString *_fullEndPoint;
 }
 
 @end
@@ -27,10 +29,10 @@
 
 - (id)initWithEndpoint:(NSString *)endpoint apiKey:(NSString *)apiKey {
     if (self = [super init]) {
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", endpoint, apiKey]];
+        _fullEndPoint = [NSString stringWithFormat:@"%@/%@", endpoint, apiKey];
+        NSURL *url = [NSURL URLWithString:_fullEndPoint];
         _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
         [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
-        
     }
     
     return self;
@@ -44,6 +46,12 @@
     for (NSString *key in [headers allKeys]) {
         [_httpClient setDefaultHeader:key value:[headers valueForKey:key]];
     }
+}
+
+- (void)setSecurityToken:(NSString *)token {
+    NSURL *url = [NSString stringWithFormat:@"%@/%@", _fullEndPoint, token];
+    _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
 }
 
 - (void)invokeGETRequestWithPath:(NSString *)path params:(NSDictionary *)params successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
