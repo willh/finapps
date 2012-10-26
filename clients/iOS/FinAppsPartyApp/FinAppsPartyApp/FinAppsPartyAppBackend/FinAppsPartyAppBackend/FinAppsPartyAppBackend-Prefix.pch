@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FinAppsPartyAppBackend' target in the 'FinAppsPartyAppBackend' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
