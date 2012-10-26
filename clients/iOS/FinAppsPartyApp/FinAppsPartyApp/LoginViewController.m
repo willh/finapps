@@ -52,6 +52,13 @@
 #pragma mark - Event Handlers
 
 - (IBAction)loginButtonTapped:(id)sender {
+    [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+        Action *action = [NSEntityDescription insertNewObjectForEntityForName:@"Action" inManagedObjectContext:managedObjectContext];
+        action.actionDescription = @"Login button clicked";
+        
+        return YES;
+    }];
+    
     if ([usernameTextField.text isEqualToString:@""] || [passwordTextField.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable to submit login credentials" message:@"Please provide a username and password" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
