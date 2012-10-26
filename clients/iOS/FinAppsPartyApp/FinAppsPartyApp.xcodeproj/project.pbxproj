@@ -34,7 +34,7 @@
 		B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216FF163B360A00091680 /* CoreDataProvider.m */; };
 		B3E21718163B3C0B00091680 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21717163B3C0B00091680 /* User.m */; };
 		B3E2171B163B3C0B00091680 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2171A163B3C0B00091680 /* Action.m */; };
-		B3E21721163B3C3200091680 /* Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21720163B3C3200091680 /* Properties.m */; };
+		B3E2172A163B453100091680 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21729163B453100091680 /* Property.m */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -112,8 +112,8 @@
 		B3E21717163B3C0B00091680 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B3E21719163B3C0B00091680 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		B3E2171A163B3C0B00091680 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
-		B3E2171F163B3C3200091680 /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
-		B3E21720163B3C3200091680 /* Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Properties.m; sourceTree = "<group>"; };
+		B3E21728163B453100091680 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		B3E21729163B453100091680 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -285,8 +285,8 @@
 			children = (
 				B3E21719163B3C0B00091680 /* Action.h */,
 				B3E2171A163B3C0B00091680 /* Action.m */,
-				B3E2171F163B3C3200091680 /* Properties.h */,
-				B3E21720163B3C3200091680 /* Properties.m */,
+				B3E21728163B453100091680 /* Property.h */,
+				B3E21729163B453100091680 /* Property.m */,
 				B3E21716163B3C0B00091680 /* User.h */,
 				B3E21717163B3C0B00091680 /* User.m */,
 			);
@@ -481,7 +481,7 @@
 				B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */,
 				B3E21718163B3C0B00091680 /* User.m in Sources */,
 				B3E2171B163B3C0B00091680 /* Action.m in Sources */,
-				B3E21721163B3C3200091680 /* Properties.m in Sources */,
+				B3E2172A163B453100091680 /* Property.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

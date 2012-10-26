@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/UserService.h"
+#import "Action.h"
 #import "User.h"
 
 @interface LoginViewController ()
@@ -79,6 +80,9 @@
         
                     user.userId = userId;
                     user.createdAt = [NSDate date];
+                    
+                    Action *loginAction = [NSEntityDescription insertNewObjectForEntityForName:@"Action" inManagedObjectContext:managedObjectContext];
+                    loginAction.actionDescription = [NSString stringWithFormat:@"User logged in with id: %@", userId];
                     
                     return YES;
                 }];

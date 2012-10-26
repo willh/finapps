@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
+#import "Action.h"
+#import "Property.h"
+
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
     CallingEngine *_callingEngine;
@@ -38,6 +41,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+        NSFetchRequest *actionsFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Action"];
+        NSArray *actions = [managedObjectContext executeFetchRequest:actionsFetchRequest error:nil];
+        for (Action *action in actions) {
+            [managedObjectContext deleteObject:action];
+        }
+        
+        NSFetchRequest *propertiesFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Property"];
+        NSArray *properties = [managedObjectContext executeFetchRequest:propertiesFetchRequest error:nil];
+        for (Property *property in properties) {
+            [managedObjectContext deleteObject:property];
+        }
+        
+        return YES;
+    }];
+    
     return YES;
 }
 

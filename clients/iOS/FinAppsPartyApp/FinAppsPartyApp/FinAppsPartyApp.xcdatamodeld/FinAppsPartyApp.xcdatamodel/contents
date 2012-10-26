@@ -3,7 +3,7 @@
     <entity name="Action" representedClassName="Action" syncable="YES">
         <attribute name="actionDescription" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Property" representedClassName="Properties" syncable="YES">
+    <entity name="Property" representedClassName="Property" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
