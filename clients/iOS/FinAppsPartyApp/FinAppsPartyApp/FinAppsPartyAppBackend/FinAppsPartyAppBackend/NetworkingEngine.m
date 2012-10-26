@@ -47,7 +47,15 @@
 - (void)invokeGETRequestWithPath:(NSString *)path params:(NSDictionary *)params successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
     
     [_httpClient getPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        successBlock(responseObject);
+        
+        NSError *error = nil;
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
+        if (!error) {
+            successBlock(jsonDict);
+        } else {
+            failureBlock(error);
+        }
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failureBlock(error);
     }];
@@ -56,7 +64,14 @@
 - (void)invokePOSTRequestWithPath:(NSString *)path data:(NSDictionary *)data successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
 
     [_httpClient postPath:path parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        successBlock(responseObject);
+
+        NSError *error = nil;
+        NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
+        if (!error) {
+            successBlock(jsonDict);
+        } else {
+            failureBlock(error);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failureBlock(error);
     }];

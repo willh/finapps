@@ -23,6 +23,8 @@
 		B3E215F1163ABF6B00091680 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E215E6163ABF6B00091680 /* AFURLConnectionOperation.m */; };
 		B3E215F2163ABF6B00091680 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E215E8163ABF6B00091680 /* AFXMLRequestOperation.m */; };
 		B3E215F3163ABF6B00091680 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E215EA163ABF6B00091680 /* UIImageView+AFNetworking.m */; };
+		B3E2160E163ACE3C00091680 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2160D163ACE3C00091680 /* BaseService.m */; };
+		B3E21611163ACF4A00091680 /* LoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21610163ACF4A00091680 /* LoginService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		B3E215E8163ABF6B00091680 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		B3E215E9163ABF6B00091680 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		B3E215EA163ABF6B00091680 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B3E2160C163ACE3C00091680 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		B3E2160D163ACE3C00091680 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		B3E2160F163ACF4A00091680 /* LoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginService.h; sourceTree = "<group>"; };
+		B3E21610163ACF4A00091680 /* LoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,10 @@
 				B3E2158C163AA5B400091680 /* Supporting Files */,
 				B3E215D4163AB08B00091680 /* NetworkingEngine.h */,
 				B3E215D5163AB08B00091680 /* NetworkingEngine.m */,
+				B3E2160C163ACE3C00091680 /* BaseService.h */,
+				B3E2160D163ACE3C00091680 /* BaseService.m */,
+				B3E2160F163ACF4A00091680 /* LoginService.h */,
+				B3E21610163ACF4A00091680 /* LoginService.m */,
 			);
 			path = FinAppsPartyAppBackend;
 			sourceTree = "<group>";
@@ -304,6 +314,8 @@
 				B3E215F1163ABF6B00091680 /* AFURLConnectionOperation.m in Sources */,
 				B3E215F2163ABF6B00091680 /* AFXMLRequestOperation.m in Sources */,
 				B3E215F3163ABF6B00091680 /* UIImageView+AFNetworking.m in Sources */,
+				B3E2160E163ACE3C00091680 /* BaseService.m in Sources */,
+				B3E21611163ACF4A00091680 /* LoginService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

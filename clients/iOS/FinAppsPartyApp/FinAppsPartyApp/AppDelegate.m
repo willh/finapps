@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
 
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
@@ -28,7 +29,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
+{
     return YES;
 }
 

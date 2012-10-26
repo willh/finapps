@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 YOLO. All rights reserved.
 //
 
-typedef void(^SuccessBlock)(NSData *responseData);
+typedef void(^SuccessBlock)(NSDictionary *ressponseData);
 typedef void(^FailureBlock)(NSError *error);
 
 #import <Foundation/Foundation.h>
