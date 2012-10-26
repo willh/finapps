@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserDetailsViewController : UIViewController
+@interface UserDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    UITableView *tableView;
+}
+
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 @end
