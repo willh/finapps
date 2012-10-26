@@ -31,6 +31,7 @@
 		B3E216A0163AFB1800091680 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E2169F163AFB1800091680 /* SystemConfiguration.framework */; };
 		B3E216A2163AFB2500091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216A1163AFB2500091680 /* AudioToolbox.framework */; };
 		B3E216C3163AFBF700091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */; };
+		B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216FF163B360A00091680 /* CoreDataProvider.m */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -102,6 +103,8 @@
 		B3E2169D163AFB1100091680 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B3E2169F163AFB1800091680 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B3E216A1163AFB2500091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B3E216FE163B360A00091680 /* CoreDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataProvider.h; sourceTree = "<group>"; };
+		B3E216FF163B360A00091680 /* CoreDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataProvider.m; sourceTree = "<group>"; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 		B3E2161C163AD50900091680 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				B3E216FE163B360A00091680 /* CoreDataProvider.h */,
+				B3E216FF163B360A00091680 /* CoreDataProvider.m */,
 				B3E2161D163AD52500091680 /* NetworkingEngineProvider.h */,
 				B3E2161E163AD52500091680 /* NetworkingEngineProvider.m */,
 			);
@@ -450,6 +455,7 @@
 				ED4D4EEC163AE85B00F6BDE6 /* MortgageApplicationViewController.m in Sources */,
 				ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */,
 				ED733979163B1B3500B1FBD1 /* ReplaceSegue.m in Sources */,
+				B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

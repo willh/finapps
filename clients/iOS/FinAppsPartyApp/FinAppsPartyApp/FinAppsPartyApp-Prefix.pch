@@ -14,6 +14,7 @@
     #import <CoreData/CoreData.h>
     #import "AppDelegate.h"
     #import "NetworkingEngineProvider.h"
+    #import "CoreDataProvider.h"
 
     #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/NetworkingEngine.h"
 #endif
