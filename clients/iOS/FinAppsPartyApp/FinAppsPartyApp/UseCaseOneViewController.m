@@ -13,6 +13,7 @@
 @end
 
 @implementation UseCaseOneViewController
+@synthesize callButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)callButtonTapped {
+    //Some kind of twilio craziness in here.
 }
 
 @end

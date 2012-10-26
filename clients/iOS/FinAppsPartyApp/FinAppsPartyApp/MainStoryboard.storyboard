@@ -12,7 +12,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to online banking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-8z-cDt">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Banking Account Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-8z-cDt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Txh-hG-v6t"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -68,19 +71,18 @@
                         <constraints>
                             <constraint firstItem="UBN-jz-jD8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="13N-db-R93"/>
                             <constraint firstAttribute="bottom" secondItem="UBN-jz-jD8" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="30x-Ht-Ho9"/>
-                            <constraint firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3F3-Zi-7uo"/>
                             <constraint firstItem="Kwh-8z-cDt" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" type="default" id="85Y-p2-wer"/>
+                            <constraint firstItem="1de-b0-qUm" firstAttribute="centerX" secondItem="j3M-6F-5g2" secondAttribute="centerX" type="default" id="KaU-Jw-gfn"/>
                             <constraint firstItem="5W5-kJ-Utr" firstAttribute="centerX" secondItem="1de-b0-qUm" secondAttribute="centerX" type="default" id="Rkx-bZ-2pw"/>
+                            <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="Kwh-8z-cDt" secondAttribute="trailing" type="default" id="T4U-mL-bPN"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="top" secondItem="R9F-1u-OF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UM6-xg-bpr"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="top" secondItem="5W5-kJ-Utr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XC5-XQ-bAF"/>
-                            <constraint firstAttribute="trailing" secondItem="Kwh-8z-cDt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aaE-Ju-bdw"/>
+                            <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="byK-zf-rRe"/>
                             <constraint firstItem="Kwh-8z-cDt" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kNu-k2-qLp"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o2K-9r-WEV"/>
                             <constraint firstItem="5W5-kJ-Utr" firstAttribute="top" secondItem="1de-b0-qUm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pGY-0c-Dvy"/>
-                            <constraint firstAttribute="trailing" secondItem="UBN-jz-jD8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qDc-56-6Ne"/>
-                            <constraint firstItem="R9F-1u-OF4" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" constant="67" id="rKd-Lf-gEu"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="centerX" secondItem="R9F-1u-OF4" secondAttribute="centerX" type="default" id="tCM-dM-hoT"/>
-                            <constraint firstAttribute="trailing" secondItem="1de-b0-qUm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x4J-iY-FLc"/>
+                            <constraint firstItem="UBN-jz-jD8" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="u1m-AH-WUp"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zOB-LR-EAb"/>
                             <constraint firstItem="R9F-1u-OF4" firstAttribute="top" secondItem="Kwh-8z-cDt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zi3-wF-W6u"/>
                         </constraints>
@@ -100,27 +102,42 @@
             </objects>
             <point key="canvasLocation" x="700" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Use Case One View Controller-->
         <scene sceneID="ool-Tc-bIe">
             <objects>
-                <viewController id="hKY-xZ-e4v" sceneMemberID="viewController">
+                <viewController id="hKY-xZ-e4v" customClass="UseCaseOneViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V8G-l2-te1">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="YOLO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WN-Om-FbZ">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMo-cW-bRk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NmH-H4-zHI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Call" backgroundImage="Button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callButtonTapped" destination="hKY-xZ-e4v" eventType="touchUpInside" id="Mcg-Df-vbn"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3WN-Om-FbZ" secondAttribute="trailing" constant="115" id="5OJ-9B-Hdf"/>
-                            <constraint firstAttribute="bottom" secondItem="3WN-Om-FbZ" secondAttribute="bottom" constant="220" id="lKx-ws-Gkl"/>
+                            <constraint firstAttribute="trailing" secondItem="iMo-cW-bRk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Nf5-SP-Agm"/>
+                            <constraint firstItem="iMo-cW-bRk" firstAttribute="leading" secondItem="V8G-l2-te1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OEL-bZ-xak"/>
+                            <constraint firstAttribute="bottom" secondItem="iMo-cW-bRk" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xMn-lv-21A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ft5-BZ-2l9"/>
+                    <connections>
+                        <outlet property="callButton" destination="iMo-cW-bRk" id="XEo-R3-G0l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-dl-gz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,6 +180,12 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UseCaseOneViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseCaseOneViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
