@@ -33,6 +33,8 @@
 		B3E216C3163AFBF700091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */; };
 		B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216FF163B360A00091680 /* CoreDataProvider.m */; };
 		B3E21718163B3C0B00091680 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21717163B3C0B00091680 /* User.m */; };
+		B3E2171B163B3C0B00091680 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2171A163B3C0B00091680 /* Action.m */; };
+		B3E2172A163B453100091680 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21729163B453100091680 /* Property.m */; };
 		B3E21731163B4D7900091680 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21730163B4D7900091680 /* BaseDAO.m */; };
 		B3E21734163B4F4100091680 /* UserDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21733163B4F4100091680 /* UserDAO.m */; };
 		B3E21744163B678F00091680 /* ActionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21743163B678F00091680 /* ActionDAO.m */; };
