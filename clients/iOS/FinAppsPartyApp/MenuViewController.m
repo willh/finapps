@@ -50,6 +50,7 @@ int const TransferCreditCase = 3;
             NSLog(@"Call support hit");
             break;
         case CreditCardCase:
+            [self performSegueWithIdentifier:@"Credit Card Application" sender:self];
             NSLog(@"Credit card hit");
             break;
         case InsuranceQuoteCase:

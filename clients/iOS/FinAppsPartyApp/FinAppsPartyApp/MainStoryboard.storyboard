@@ -4,6 +4,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
+        <!--Credit Card Application View Controller-->
+        <scene sceneID="MbC-Or-3AT">
+            <objects>
+                <viewController id="NqJ-vV-Vem" customClass="CreditCardApplicationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OYK-eP-m76">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Credit Card Application" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-gT-f1L">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fhu-gT-f1L" firstAttribute="top" secondItem="OYK-eP-m76" secondAttribute="top" constant="138" id="3jE-fX-uaG"/>
+                            <constraint firstItem="Fhu-gT-f1L" firstAttribute="centerX" secondItem="OYK-eP-m76" secondAttribute="centerX" type="default" id="8wU-W3-1aA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VFB-Le-Une"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAo-4M-77e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="-700"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="U0G-90-yXU">
             <objects>
@@ -99,12 +125,12 @@
                         <outlet property="cardApplicationCaseButton" destination="pov-Ny-rS8" id="0E3-07-Ovz"/>
                         <outlet property="insuranceQuoteCaseButton" destination="0WG-N4-Tl2" id="8ko-ZI-few"/>
                         <outlet property="transferCreditCaseButton" destination="5d1-Nm-bi9" id="VIX-6x-vJ6"/>
-                        <segue destination="hKY-xZ-e4v" kind="push" identifier="UseCaseOne" id="QB7-oL-7z3"/>
+                        <segue destination="NqJ-vV-Vem" kind="push" identifier="CreditCardApplication" id="oa1-sv-E5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGf-Qu-kJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181" y="34"/>
+            <point key="canvasLocation" x="1261" y="34"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8ur-tS-fwl">
@@ -204,21 +230,6 @@
             </objects>
             <point key="canvasLocation" x="736" y="34"/>
         </scene>
-        <!--Use Case One View Controller-->
-        <scene sceneID="ool-Tc-bIe">
-            <objects>
-                <viewController id="hKY-xZ-e4v" customClass="UseCaseOneViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="V8G-l2-te1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ft5-BZ-2l9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AZq-dl-gz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1615" y="34"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BLx-t0-PyQ">
             <objects>
@@ -241,36 +252,6 @@
     <resources>
         <image name="Button.png" width="162" height="42"/>
     </resources>
-    <classes>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTapped:"/>
-                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonTapped:"/>
-                <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cardApplicationCaseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="insuranceQuoteCaseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="transferCreditCaseButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="UseCaseOneViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UseCaseOneViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
