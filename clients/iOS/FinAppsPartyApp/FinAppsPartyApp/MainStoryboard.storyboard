@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BaX-oq-3fb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wb6-AR-W3E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="Wfo-zv-eaR" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="riX-H5-mvN">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-k1-cDv">
@@ -64,14 +64,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGf-Qu-kJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1261" y="34"/>
+            <point key="canvasLocation" x="2313" y="34"/>
         </scene>
         <!--Mortgage Application View Controller - Mortgage Application-->
         <scene sceneID="1Lm-iS-U3v">
             <objects>
                 <viewController id="BMH-Dc-n51" customClass="MortgageApplicationViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6KF-ed-gxS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What is your basic annual salary? (€)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-d1-gMM">
@@ -204,7 +204,7 @@
             <objects>
                 <viewController id="yUv-8j-Ljh" customClass="LoanAmountViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5S-2P-9rq">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -219,7 +219,7 @@
             <objects>
                 <viewController id="wb6-AR-W3E" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3M-6F-5g2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Banking Account Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-8z-cDt">
@@ -305,78 +305,61 @@
                         <outlet property="submitLoginButton" destination="UBN-jz-jD8" id="krK-o4-Um6"/>
                         <outlet property="usernameMessageLabel" destination="R9F-1u-OF4" id="AmT-5B-Qlv"/>
                         <outlet property="usernameTextField" destination="1de-b0-qUm" id="rJs-r8-nNM"/>
-                        <segue destination="Wfo-zv-eaR" kind="push" identifier="Menu" id="fxD-T7-jOc"/>
+                        <segue destination="Wfo-zv-eaR" kind="custom" identifier="Menu" customClass="ReplaceSegue" id="r6B-v0-hZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-PC-qFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="34"/>
+            <point key="canvasLocation" x="598" y="186"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BLx-t0-PyQ">
+        <!--Tab Bar Controller-->
+        <scene sceneID="2R1-Km-l4Z">
             <objects>
-                <navigationController id="BaX-oq-3fb" sceneMemberID="viewController">
+                <tabBarController id="DLm-Dx-IuP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Map-Zr-3Sv">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ra1-qk-30Z">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hj2-gc-sPC" kind="relationship" relationship="viewControllers" id="bpt-jU-kLq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92A-Sl-Ogo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="590"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="ptm-gG-ckF">
+            <objects>
+                <navigationController id="hj2-gc-sPC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qLj-ep-khI"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2j8-3H-uhf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q0f-Hz-2qO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wb6-AR-W3E" kind="relationship" relationship="rootViewController" id="fV9-FF-69q"/>
+                        <segue destination="Wfo-zv-eaR" kind="relationship" relationship="rootViewController" id="PLg-GX-jgz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Snl-eU-5Hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGM-w4-eWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="26"/>
+            <point key="canvasLocation" x="1787" y="34"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button.png" width="162" height="42"/>
     </resources>
-    <classes>
-        <class className="LoanAmountViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoanAmountViewController.h"/>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTapped:"/>
-                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonTapped:"/>
-                <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mortgageApplicationButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MortgageApplicationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MortgageApplicationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sliderValueChanged:" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="annualIncomeTextBox" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="annualSalaryTextBox" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="applyButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dependantsLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dependantsSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="monthlyCreditTextBox" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="r6B-v0-hZc"/>
+    </inferredMetricsTieBreakers>
 </document>
