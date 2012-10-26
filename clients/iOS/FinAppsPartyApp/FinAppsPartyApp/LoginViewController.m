@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/UserService.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -59,11 +61,34 @@
         NSString *password = passwordTextField.text;
         
         LoginService *service = [[LoginService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
-                                 
+        UserService *userService = [[UserService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+        
+        // Get the user token first
         [service loginWithUsername:username password:password successBlock:^(NSString *token) {
-            
-            [self performSegueWithIdentifier:@"Menu" sender:self];
-            
+
+            // If it succeeds, get user data
+            [userService userDataWithSuccessBlock:^(NSDictionary *userDict) {
+                
+                NSString *userId = userDict[@"id"];
+                if ([userId length] == 0) {
+                    return;
+                }
+                
+                [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+                    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
+        
+                    user.userId = userId;
+                    
+                    return YES;
+                }];
+
+                [self performSegueWithIdentifier:@"Menu" sender:self];
+                
+            } failureBlock:^(UserError *error) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:error.title message:error.message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+                [alertView show];
+            }];
+                        
         } failureBlock:^(UserError *error) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:error.title message:error.message delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alertView show];

@@ -32,6 +32,9 @@
 		B3E216A2163AFB2500091680 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216A1163AFB2500091680 /* AudioToolbox.framework */; };
 		B3E216C3163AFBF700091680 /* libFinAppsPartyAppBackend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E216AB163AFBAF00091680 /* libFinAppsPartyAppBackend.a */; };
 		B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216FF163B360A00091680 /* CoreDataProvider.m */; };
+		B3E21718163B3C0B00091680 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21717163B3C0B00091680 /* User.m */; };
+		B3E2171B163B3C0B00091680 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2171A163B3C0B00091680 /* Action.m */; };
+		B3E21721163B3C3200091680 /* Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21720163B3C3200091680 /* Properties.m */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -105,6 +108,12 @@
 		B3E216A1163AFB2500091680 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B3E216FE163B360A00091680 /* CoreDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataProvider.h; sourceTree = "<group>"; };
 		B3E216FF163B360A00091680 /* CoreDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataProvider.m; sourceTree = "<group>"; };
+		B3E21716163B3C0B00091680 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B3E21717163B3C0B00091680 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B3E21719163B3C0B00091680 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		B3E2171A163B3C0B00091680 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
+		B3E2171F163B3C3200091680 /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
+		B3E21720163B3C3200091680 /* Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Properties.m; sourceTree = "<group>"; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -193,6 +202,7 @@
 				B3E21550163AA55900091680 /* AppDelegate.h */,
 				B3E21551163AA55900091680 /* AppDelegate.m */,
 				B3E2157A163AA57C00091680 /* Backend */,
+				B3E2170B163B3BCD00091680 /* Core Data */,
 				B3E21559163AA55900091680 /* FinAppsPartyApp.xcdatamodeld */,
 				ED6A68D0163AD82100EB3648 /* LoginScreen */,
 				ED0E487B163ACFA1007039BB /* LoginViewController.h */,
@@ -200,11 +210,11 @@
 				B3E215BD163AA80900091680 /* MainStoryboard.storyboard */,
 				ED6A68D1163AD82F00EB3648 /* MenuScreen */,
 				B3E2161C163AD50900091680 /* Providers */,
+				ED733977163B1B3500B1FBD1 /* ReplaceSegue.h */,
+				ED733978163B1B3500B1FBD1 /* ReplaceSegue.m */,
 				ED0E4876163ACF70007039BB /* Resources */,
 				B3E21548163AA55900091680 /* Supporting Files */,
 				ED6A68D2163AD83C00EB3648 /* UseCases */,
-				ED733977163B1B3500B1FBD1 /* ReplaceSegue.h */,
-				ED733978163B1B3500B1FBD1 /* ReplaceSegue.m */,
 			);
 			path = FinAppsPartyApp;
 			sourceTree = "<group>";
@@ -268,6 +278,19 @@
 				B3E216AD163AFBAF00091680 /* FinAppsPartyAppBackendTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3E2170B163B3BCD00091680 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B3E21719163B3C0B00091680 /* Action.h */,
+				B3E2171A163B3C0B00091680 /* Action.m */,
+				B3E2171F163B3C3200091680 /* Properties.h */,
+				B3E21720163B3C3200091680 /* Properties.m */,
+				B3E21716163B3C0B00091680 /* User.h */,
+				B3E21717163B3C0B00091680 /* User.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		ED0E4876163ACF70007039BB /* Resources */ = {
@@ -456,6 +479,9 @@
 				ED733969163B111200B1FBD1 /* LoanAmountViewController.m in Sources */,
 				ED733979163B1B3500B1FBD1 /* ReplaceSegue.m in Sources */,
 				B3E21700163B360A00091680 /* CoreDataProvider.m in Sources */,
+				B3E21718163B3C0B00091680 /* User.m in Sources */,
+				B3E2171B163B3C0B00091680 /* Action.m in Sources */,
+				B3E21721163B3C3200091680 /* Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
