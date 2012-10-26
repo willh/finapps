@@ -82,11 +82,22 @@
                     return;
                 }
                 
+                NSDictionary *holderDict = userDict[@"holder"];
+                NSDictionary *addressDict = holderDict[@"address"];
+                
                 [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
                     User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
         
+                    
                     user.userId = userId;
                     user.createdAt = [NSDate date];
+                    user.firstName = holderDict[@"firstName"];
+                    user.secondName = holderDict[@"lastName"];
+                    user.street = addressDict[@"street"];
+                    user.streetNumber = addressDict[@"number"];
+                    user.city = addressDict[@"city"];
+                    user.postalCode = addressDict[@"postalCode"];
+                    user.country = addressDict[@"country"];
                     
                     Action *loginAction = [NSEntityDescription insertNewObjectForEntityForName:@"Action" inManagedObjectContext:managedObjectContext];
                     loginAction.actionDescription = [NSString stringWithFormat:@"User logged in with id: %@", userId];

@@ -12,7 +12,14 @@
 
 @interface User : NSManagedObject
 
-@property (nonatomic, retain) NSString * userId;
 @property (nonatomic, retain) NSDate * createdAt;
+@property (nonatomic, retain) NSString * userId;
+@property (nonatomic, retain) NSString * firstName;
+@property (nonatomic, retain) NSString * secondName;
+@property (nonatomic, retain) NSString * street;
+@property (nonatomic, retain) NSString * streetNumber;
+@property (nonatomic, retain) NSString * city;
+@property (nonatomic, retain) NSString * postalCode;
+@property (nonatomic, retain) NSString * country;
 
 @end
