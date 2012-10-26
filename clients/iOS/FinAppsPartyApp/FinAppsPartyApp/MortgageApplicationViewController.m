@@ -1,18 +1,19 @@
 //
-//  InsuranceQuoteViewController.m
+//  MortgageApplicationViewController.m
 //  FinAppsPartyApp
 //
 //  Created by Kyle Davidson on 26/10/2012.
 //  Copyright (c) 2012 Tomasz Janeczko. All rights reserved.
 //
 
-#import "InsuranceQuoteViewController.h"
+#import "MortgageApplicationViewController.h"
 
-@interface InsuranceQuoteViewController ()
+@interface MortgageApplicationViewController ()
 
 @end
 
-@implementation InsuranceQuoteViewController
+@implementation MortgageApplicationViewController
+@synthesize productTypePickerView, purchasingPriceTextField, requestedAmountTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

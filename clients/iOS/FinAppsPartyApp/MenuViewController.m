@@ -13,12 +13,10 @@
 @end
 
 int const CallSupportCase = 0;
-int const CreditCardCase = 1;
-int const InsuranceQuoteCase = 2;
-int const TransferCreditCase = 3;
+int const MortgageApplicationCase = 1;
 
 @implementation MenuViewController
-@synthesize callSupportButton, transferCreditCaseButton, cardApplicationCaseButton, insuranceQuoteCaseButton;
+@synthesize callSupportButton, mortgageApplicationButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,22 +42,13 @@ int const TransferCreditCase = 3;
 #pragma mark - Event handlers
 - (IBAction)buttonTapped:(id)sender {
     int button = [(UIButton*)sender tag];
-    
     switch (button) {
         case CallSupportCase:
             NSLog(@"Call support hit");
             break;
-        case CreditCardCase:
-            [self performSegueWithIdentifier:@"CreditCardApplication" sender:self];
-            NSLog(@"Credit card hit");
-            break;
-        case InsuranceQuoteCase:
+        case MortgageApplicationCase:
             NSLog(@"Insurance quote hit");
-            [self performSegueWithIdentifier:@"InsuranceQuote" sender:self];
-            break;
-        case TransferCreditCase:
-            NSLog(@"Transfer credit hit");
-            [self performSegueWithIdentifier:@"TransferCredit" sender:self];
+            [self performSegueWithIdentifier:@"MortgageApplication" sender:self];
             break;
         default:
             break;

@@ -10,14 +10,9 @@
 
 @interface MenuViewController : UIViewController {
     UIButton *callSupportButton;
-    UIButton *insuranceQuoteCaseButton;
-    UIButton *cardApplicationCaseButton;
-    UIButton *transferCreditCaseButton;
+    UIButton *mortgageApplicationButton;
 }
 
 @property(nonatomic, retain) IBOutlet UIButton *callSupportButton;
-@property(nonatomic, retain) IBOutlet UIButton *insuranceQuoteCaseButton;
-@property(nonatomic, retain) IBOutlet UIButton *cardApplicationCaseButton;
-@property(nonatomic, retain) IBOutlet UIButton *transferCreditCaseButton;
-
+@property(nonatomic, retain) IBOutlet UIButton *mortgageApplicationButton;
 @end
