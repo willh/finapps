@@ -49,7 +49,7 @@
 }
 
 - (void)setSecurityToken:(NSString *)token {
-    NSURL *url = [NSString stringWithFormat:@"%@/%@", _fullEndPoint, token];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", _fullEndPoint, token]];
     _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
 }
