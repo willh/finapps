@@ -52,6 +52,7 @@
 		B3E216E1163B180600091680 /* AccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216E0163B180600091680 /* AccountService.m */; };
 		B3E216EF163B1A7F00091680 /* CardsService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216EE163B1A7F00091680 /* CardsService.m */; };
 		B3E216F3163B2D6B00091680 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E216F2163B2D6B00091680 /* UserService.m */; };
+		B3E2172D163B4A1300091680 /* PayloadService.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2172C163B4A1200091680 /* PayloadService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		B3E216EE163B1A7F00091680 /* CardsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsService.m; sourceTree = "<group>"; };
 		B3E216F1163B2D6B00091680 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		B3E216F2163B2D6B00091680 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		B3E2172B163B4A1200091680 /* PayloadService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayloadService.h; sourceTree = "<group>"; };
+		B3E2172C163B4A1200091680 /* PayloadService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayloadService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				B3E21610163ACF4A00091680 /* LoginService.m */,
 				B3E215D4163AB08B00091680 /* NetworkingEngine.h */,
 				B3E215D5163AB08B00091680 /* NetworkingEngine.m */,
+				B3E2172B163B4A1200091680 /* PayloadService.h */,
+				B3E2172C163B4A1200091680 /* PayloadService.m */,
 				B3E2158C163AA5B400091680 /* Supporting Files */,
 				B3E21671163AE82B00091680 /* TwilioService.h */,
 				B3E21672163AE82B00091680 /* TwilioService.m */,
@@ -455,6 +460,7 @@
 				B3E216E1163B180600091680 /* AccountService.m in Sources */,
 				B3E216EF163B1A7F00091680 /* CardsService.m in Sources */,
 				B3E216F3163B2D6B00091680 /* UserService.m in Sources */,
+				B3E2172D163B4A1300091680 /* PayloadService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
