@@ -17,33 +17,31 @@
     NSManagedObjectContext *childMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     childMOC.parentContext = mainMOC;
     
-    [childMOC performBlock:^{
-        BOOL shouldSaveMOC = transactionBlock(childMOC);
+    BOOL shouldSaveMOC = transactionBlock(childMOC);
+    
+    if (shouldSaveMOC) {
         
-        if (shouldSaveMOC) {
+        NSError *childMOCError = nil;
+        if ([childMOC save:&childMOCError]) {
             
-            NSError *childMOCError = nil;
-            if ([childMOC save:&childMOCError]) {
+            [mainMOC performBlock:^{
                 
-                [mainMOC performBlock:^{
+                NSError *parentMOCError = nil;
+                if ([mainMOC save:&parentMOCError]) {
                     
-                    NSError *parentMOCError = nil;
-                    if ([mainMOC save:&parentMOCError]) {
-                        
-                        // Finally done :)
-                        
-                    } else {
-                        NSLog(@"Parent MOC save error!: %@", childMOCError);
-                    }
-                         
-                }];
-                
-            } else {
-                NSLog(@"Child MOC save error!: %@", childMOCError);
-            }
+                    // Finally done :)
+                    
+                } else {
+                    NSLog(@"Parent MOC save error!: %@", childMOCError);
+                }
+                     
+            }];
             
+        } else {
+            NSLog(@"Child MOC save error!: %@", childMOCError);
         }
-    }];
+        
+    }
 }
 
 @end
