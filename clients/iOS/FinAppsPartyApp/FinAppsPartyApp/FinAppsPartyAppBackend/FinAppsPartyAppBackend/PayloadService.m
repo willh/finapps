@@ -11,7 +11,7 @@
 
 @implementation PayloadService
 
-- (void)sendPayloadWithToken:(NSString *)token userId:(NSString *)userId context:(NSString *)context actions:(NSArray *)actions properties:(NSArray *)properties successBlock:(PayloadSuccessfulBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
+- (void)sendPayloadWithToken:(NSString *)token userId:(NSString *)userId context:(NSString *)context actions:(NSArray *)actions properties:(NSDictionary *)properties successBlock:(PayloadSuccessfulBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
     
     NSURL *url = [NSURL URLWithString:@"http://finappspayload.herokuapp.com/payload"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
@@ -23,7 +23,7 @@
     } 
     
     if (!properties) {
-        properties = @[];
+        properties = @{};
     }
     
     NSDictionary *parameters = @{

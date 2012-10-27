@@ -43,6 +43,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (IBAction)applyButtonTapped:(id)sender {
     int cardTypeId = cardTypeSegmentedControl.selectedSegmentIndex;
     int issuerId = cardIssuerSegmentedControl.selectedSegmentIndex;
@@ -75,8 +77,12 @@
             return NO;
         }];
         
+        NSDictionary *properties = @{
+        @"Card type": @(cardTypeSegmentedControl.selectedSegmentIndex),
+        @"Card issuer id": @(cardIssuerSegmentedControl.selectedSegmentIndex)
+        };
         
-        [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Call Support" actions:actions properties:nil successBlock:^(NSDictionary *response) {
+        [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Adding Credit Card Process" actions:actions properties:properties successBlock:^(NSDictionary *response) {
             
             [callingEngine connect:@"+442033221655"];
             [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
