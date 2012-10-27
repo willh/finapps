@@ -33,6 +33,7 @@
         NSURL *url = [NSURL URLWithString:_fullEndPoint];
         _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
         [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
+        _httpClient.parameterEncoding = AFJSONParameterEncoding;
     }
     
     return self;
@@ -52,6 +53,7 @@
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", _fullEndPoint, token]];
     _httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     [_httpClient setDefaultHeader:@"Content-type" value:@"application/json"];
+    _httpClient.parameterEncoding = AFJSONParameterEncoding;
 }
 
 - (void)invokeGETRequestWithPath:(NSString *)path params:(NSDictionary *)params successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {

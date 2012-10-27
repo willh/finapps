@@ -26,11 +26,8 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)refreshData
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
     CardsService *service = [[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
     
     [service cardsListWithSuccessBlock:^(NSArray *cards) {
@@ -41,12 +38,29 @@
     }];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self refreshData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (void)addCreditCardVC:(AddCreditCardViewController *)addCreditCardVC didAddCard:(NSDictionary *)cardData {
+    [self refreshData];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AddCreditCardSegue"]) {
+        AddCreditCardViewController *addCreditCardVC = segue.destinationViewController;
+        addCreditCardVC.delegate = self;
+    }
+}
 
 #pragma mark - UITableViewDataSource methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

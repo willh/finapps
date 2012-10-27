@@ -36,6 +36,7 @@
 		B3E21731163B4D7900091680 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21730163B4D7900091680 /* BaseDAO.m */; };
 		B3E21734163B4F4100091680 /* UserDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21733163B4F4100091680 /* UserDAO.m */; };
 		B3E21744163B678F00091680 /* ActionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21743163B678F00091680 /* ActionDAO.m */; };
+		B3E21747163B722400091680 /* AddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E21746163B722400091680 /* AddCreditCardViewController.m */; };
 		ED0E4879163ACF88007039BB /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4877163ACF88007039BB /* Button.png */; };
 		ED0E487A163ACF88007039BB /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0E4878163ACF88007039BB /* Button@2x.png */; };
 		ED0E487F163ACFA1007039BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0E487C163ACFA1007039BB /* LoginViewController.m */; };
@@ -126,12 +127,12 @@
 		B3E21733163B4F4100091680 /* UserDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDAO.m; sourceTree = "<group>"; };
 		B3E21742163B678E00091680 /* ActionDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionDAO.h; sourceTree = "<group>"; };
 		B3E21743163B678F00091680 /* ActionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionDAO.m; sourceTree = "<group>"; };
+		B3E21745163B722400091680 /* AddCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCreditCardViewController.h; sourceTree = "<group>"; };
+		B3E21746163B722400091680 /* AddCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCreditCardViewController.m; sourceTree = "<group>"; };
 		ED0E4877163ACF88007039BB /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button.png; sourceTree = "<group>"; };
 		ED0E4878163ACF88007039BB /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
 		ED0E487B163ACFA1007039BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		ED0E487C163ACFA1007039BB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UseCaseOneViewController.h; path = /Users/kyledavidson/finapps/clients/iOS/FinAppsPartyApp/FinAppsPartyApp/UseCaseOneViewController.h; sourceTree = "<absolute>"; };
-		ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UseCaseOneViewController.m; path = /Users/kyledavidson/finapps/clients/iOS/FinAppsPartyApp/FinAppsPartyApp/UseCaseOneViewController.m; sourceTree = "<absolute>"; };
 		ED4D4EEA163AE85B00F6BDE6 /* MortgageApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MortgageApplicationViewController.h; sourceTree = "<group>"; };
 		ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MortgageApplicationViewController.m; sourceTree = "<group>"; };
 		ED6A68CD163AD80F00EB3648 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ../MenuViewController.h; sourceTree = "<group>"; };
@@ -361,14 +362,14 @@
 		ED6A68D2163AD83C00EB3648 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				ED0E487D163ACFA1007039BB /* UseCaseOneViewController.h */,
-				ED0E487E163ACFA1007039BB /* UseCaseOneViewController.m */,
-				ED4D4EEA163AE85B00F6BDE6 /* MortgageApplicationViewController.h */,
-				ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */,
-				ED733967163B111200B1FBD1 /* LoanAmountViewController.h */,
-				ED733968163B111200B1FBD1 /* LoanAmountViewController.m */,
+				B3E21745163B722400091680 /* AddCreditCardViewController.h */,
+				B3E21746163B722400091680 /* AddCreditCardViewController.m */,
 				ED7339A4163B4D7100B1FBD1 /* CreditCardViewController.h */,
 				ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */,
+				ED733967163B111200B1FBD1 /* LoanAmountViewController.h */,
+				ED733968163B111200B1FBD1 /* LoanAmountViewController.m */,
+				ED4D4EEA163AE85B00F6BDE6 /* MortgageApplicationViewController.h */,
+				ED4D4EEB163AE85B00F6BDE6 /* MortgageApplicationViewController.m */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -528,6 +529,7 @@
 				B3E21731163B4D7900091680 /* BaseDAO.m in Sources */,
 				B3E21734163B4F4100091680 /* UserDAO.m in Sources */,
 				B3E21744163B678F00091680 /* ActionDAO.m in Sources */,
+				B3E21747163B722400091680 /* AddCreditCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

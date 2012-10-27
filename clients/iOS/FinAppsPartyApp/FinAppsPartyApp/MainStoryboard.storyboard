@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Te4-YG-zx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2331" y="727"/>
+            <point key="canvasLocation" x="2339" y="693"/>
         </scene>
         <!--Credit Card View Controller - Credit Cards-->
         <scene sceneID="Dp6-jP-DNd">
@@ -125,7 +125,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Credit Cards" id="oGK-vr-gRa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F54-N6-Dz8"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="F54-N6-Dz8">
+                            <connections>
+                                <segue destination="i6i-ak-uQo" kind="push" identifier="AddCreditCardSegue" id="lmr-dM-EJa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="_tableView" destination="nhE-yR-vfo" id="DJI-xF-OpO"/>
@@ -134,6 +138,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42h-Y6-M5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="1363"/>
+        </scene>
+        <!--Add Credit Card View Controller - New card-->
+        <scene sceneID="F6d-6M-0Zt">
+            <objects>
+                <viewController id="i6i-ak-uQo" customClass="AddCreditCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MvH-XY-ixU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Apply for a new credit card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="Z6r-Eh-zpu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="gyR-VH-qJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Card type:" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="ieH-tW-bPx">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="IkV-Mo-heK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Card Issuer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckp-FE-JaB">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GS9-kw-wZE">
+                                <segments>
+                                    <segment title="Credit"/>
+                                    <segment title="Debit"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NKk-tQ-La1">
+                                <segments>
+                                    <segment title="Visa"/>
+                                    <segment title="Visa Gold"/>
+                                    <segment title="AmEx"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="top" secondItem="MvH-XY-ixU" secondAttribute="top" type="default" id="Aah-J9-nqq"/>
+                            <constraint firstItem="ckp-FE-JaB" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="GWy-lY-rsO"/>
+                            <constraint firstItem="GS9-kw-wZE" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jby-NL-dev"/>
+                            <constraint firstItem="NKk-tQ-La1" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jr3-zD-TWN"/>
+                            <constraint firstAttribute="trailing" secondItem="GS9-kw-wZE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KeZ-VB-1Wa"/>
+                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MCO-Nc-tgT"/>
+                            <constraint firstItem="ieH-tW-bPx" firstAttribute="centerX" secondItem="Z6r-Eh-zpu" secondAttribute="centerX" type="default" id="UuS-Ro-K55"/>
+                            <constraint firstItem="GS9-kw-wZE" firstAttribute="top" secondItem="ieH-tW-bPx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XMf-na-tND"/>
+                            <constraint firstItem="ieH-tW-bPx" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="YTI-Kv-IJH"/>
+                            <constraint firstItem="NKk-tQ-La1" firstAttribute="top" secondItem="ckp-FE-JaB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hvq-Y8-AtQ"/>
+                            <constraint firstItem="ieH-tW-bPx" firstAttribute="top" secondItem="Z6r-Eh-zpu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tC1-v2-YRv"/>
+                            <constraint firstItem="ckp-FE-JaB" firstAttribute="top" secondItem="GS9-kw-wZE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xCg-5V-dYN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New card" id="2n8-3c-VL8">
+                        <barButtonItem key="rightBarButtonItem" title="Apply" id="QkN-Ee-nCM">
+                            <connections>
+                                <action selector="applyButtonTapped:" destination="i6i-ak-uQo" id="uWF-dM-dwJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cardIssuerSegmentedControl" destination="NKk-tQ-La1" id="GBE-Qt-qSY"/>
+                        <outlet property="cardTypeSegmentedControl" destination="GS9-kw-wZE" id="K1X-7s-yp4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgh-au-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="1363"/>
         </scene>
         <!--Mortgage Application View Controller - Mortgage Application-->
         <scene sceneID="1Lm-iS-U3v">
@@ -449,6 +528,14 @@
         <image name="Button.png" width="162" height="42"/>
     </resources>
     <classes>
+        <class className="AddCreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="applyButtonTapped:"/>
+                <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
         <class className="CreditCardViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CreditCardViewController.h"/>
             <relationships>
