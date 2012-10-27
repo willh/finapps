@@ -55,13 +55,12 @@ int const MortgageApplicationCase = 1;
         {
             AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
             CallingEngine *callingEngine = [appDelegate callingEngine];
-            [MTStatusBarOverlay sharedInstance].animation = MTStatusBarOverlayAnimationFallDown;
+            [MTStatusBarOverlay sharedInstance].animation = MTStatusBarOverlayAnimationNone;
             [MTStatusBarOverlay sharedInstance].delegate = self;
             
             UIButton *senderButton = (UIButton *)sender;
             
             if (!_isCalling) {
-                [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
                 [[[TwilioService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
                     PayloadService *service = [[PayloadService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
 
@@ -79,6 +78,7 @@ int const MortgageApplicationCase = 1;
                     [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Call Support" actions:actions properties:nil successBlock:^(NSDictionary *response) {
 
                         [callingEngine connect:@"+442033221655"];
+                        [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
                         [senderButton setTitle:@"Disconnect" forState:UIControlStateNormal];
                         _isCalling = YES;
 

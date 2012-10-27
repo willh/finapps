@@ -934,7 +934,12 @@ unsigned int statusBarBackgroundGreySmall_png_len = 1015;
 			[self setDetailViewHidden:!self.detailViewHidden animated:YES];
 			break;
 		case MTStatusBarOverlayAnimationNone:
-			// ignore
+        {
+            AppDelegate *appDel = [UIApplication sharedApplication].delegate;
+            CallingEngine *callingEngine = [appDel callingEngine];
+            [callingEngine disconnect];
+        }
+            [self postFinishMessage:@"Call ended" duration:2];
 			break;
 	}
 }
