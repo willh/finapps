@@ -30,8 +30,8 @@
     [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
         UserDAO *userDAO = [[UserDAO alloc] initWithManagedObjectContext:managedObjectContext];
         User *user = [userDAO recentUser];
-        NSArray *keys = [[NSArray alloc] initWithObjects:@"First Name", @"Second Name", @"Street",
-                         @"Street Number", @"City", @"Postcode", nil];
+        keys = [[NSMutableArray alloc] initWithObjects:@"First Name", @"Second Name", @"Street",
+        @"Street Number", @"City", @"Postcode", nil];
         NSArray *values = [[NSArray alloc] initWithObjects:user.firstName, user.secondName, user.street, user.streetNumber, user.city, user.postalCode, nil];
         userData = [[NSDictionary alloc] initWithObjects:values forKeys:keys];
         
@@ -67,7 +67,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
 
-    NSString *sectionName = [[userData allKeys] objectAtIndex:[indexPath row]];
+    NSString *sectionName = [keys objectAtIndex:[indexPath row]];
     NSString *sectionValue = [userData valueForKey:sectionName];
     
     cell.textLabel.text = sectionName;

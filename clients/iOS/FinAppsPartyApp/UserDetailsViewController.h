@@ -11,6 +11,7 @@
 @interface UserDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     UITableView *tableView;
     NSDictionary *userData;
+    NSMutableArray *keys;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
