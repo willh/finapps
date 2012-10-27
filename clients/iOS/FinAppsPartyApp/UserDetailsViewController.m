@@ -30,15 +30,15 @@
     [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
         UserDAO *userDAO = [[UserDAO alloc] initWithManagedObjectContext:managedObjectContext];
         User *user = [userDAO recentUser];
-        NSArray *keys = [[NSArray alloc] initWithObjects:@"FirstName", @"SecondName", @"Street",
-                         @"StreetNumber", @"City", @"Postcode", nil];
+        NSArray *keys = [[NSArray alloc] initWithObjects:@"First Name", @"Second Name", @"Street",
+                         @"Street Number", @"City", @"Postcode", nil];
         NSArray *values = [[NSArray alloc] initWithObjects:user.firstName, user.secondName, user.street, user.streetNumber, user.city, user.postalCode, nil];
         userData = [[NSDictionary alloc] initWithObjects:values forKeys:keys];
         
         return NO;
     }];
     
-    self.navigationItem.title = [[NSString alloc] initWithFormat:@"%@'s details", [userData valueForKey:@"FirstName"]];
+    self.navigationItem.title = [[NSString alloc] initWithFormat:@"%@'s details", [userData valueForKey:@"First Name"]];
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view.
