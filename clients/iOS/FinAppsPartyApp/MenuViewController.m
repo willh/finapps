@@ -74,10 +74,11 @@ int const MortgageApplicationCase = 1;
                         return NO;
                     }];
                     
+                    NSString *callerName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.secondName];
                     
                     [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Call Support" actions:actions properties:nil successBlock:^(NSDictionary *response) {
 
-                        [callingEngine connect:@"+442033221655"];
+                        [callingEngine connect:@"+442033221655" withCallerName:callerName];
                         [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
                         [senderButton setTitle:@"Disconnect" forState:UIControlStateNormal];
                         _isCalling = YES;

@@ -12,7 +12,7 @@
 
 @interface CallingEngine : BaseService<TCDeviceDelegate>
 
-- (void)connect:(NSString *)phoneNumber;
+- (void)connect:(NSString *)phoneNumber withCallerName:(NSString *)callerName;
 
 - (void)disconnect;
 

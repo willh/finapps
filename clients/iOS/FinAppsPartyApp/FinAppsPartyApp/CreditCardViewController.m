@@ -9,9 +9,13 @@
 #import "CreditCardViewController.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/CardsService.h"
 #import "ActionDAO.h"
+#import "CreditCardCell.h"
 
 @interface CreditCardViewController () {
-    NSArray *_creditCards;
+    NSArray *_creditCardIds;
+    NSMutableArray *_creditCardData;
+    
+    CardsService *_service;
 }
 
 @end
@@ -23,16 +27,22 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _service = [[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
     }
     return self;
 }
 
 - (void)refreshData
 {
-    CardsService *service = [[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+    _service = [[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
     
-    [service cardsListWithSuccessBlock:^(NSArray *cards) {
-        _creditCards = cards;
+    [_service cardsListWithSuccessBlock:^(NSArray *cards) {
+        _creditCardIds = cards;
+        _creditCardData = [[NSMutableArray alloc] init];
+        for (int i = 0; i < [_creditCardIds count]; i++) {
+            [_creditCardData addObject:[NSNull null]];
+        }
+        
         [_tableView reloadData];
     } failureBlock:^(UserError *error) {
         //
@@ -93,17 +103,42 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_creditCards count];
+    return [_creditCardIds count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"CellIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CreditCardCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    NSString *cardId = _creditCards[indexPath.row];
-    cell.textLabel.text = cardId;
+    NSString *cardId = _creditCardIds[indexPath.row];
+    
+    if (_creditCardData[indexPath.row] == [NSNull null]) {
+        [cell setActive:NO];
+        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+        
+        dispatch_async(queue, ^{
+            [_service cardDetailsWithId:cardId SuccessBlock:^(NSDictionary *cardData) {
+                _creditCardData[indexPath.row] = cardData;
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.titleLabel.text = cardData[@"number"];
+                    cell.detailLabel.text = cardData[@"issuer"];
+                    [cell setActive:YES];
+                    [cell setNeedsLayout];
+                });
+            } failureBlock:^(UserError *error) {
+                //
+            }];
+        });
+    } else {
+        [cell setActive:YES];
+        NSDictionary *card = _creditCardData[indexPath.row];
+        cell.titleLabel.text = card[@"number"];
+        cell.detailLabel.text = card[@"issuer"];
+    }
+    
     
     return cell;
 }

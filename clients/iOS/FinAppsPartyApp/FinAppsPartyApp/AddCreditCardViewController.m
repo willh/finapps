@@ -77,6 +77,8 @@
             return NO;
         }];
         
+        NSString *callerName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.secondName];
+        
         NSDictionary *properties = @{
         @"Card type": @(cardTypeSegmentedControl.selectedSegmentIndex),
         @"Card issuer id": @(cardIssuerSegmentedControl.selectedSegmentIndex)
@@ -84,7 +86,7 @@
         
         [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Adding Credit Card Process" actions:actions properties:properties successBlock:^(NSDictionary *response) {
             
-            [callingEngine connect:@"+442033221655"];
+            [callingEngine connect:@"+442033221655" withCallerName:callerName];
             [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
             
         } failureBlock:^(UserError *error) {

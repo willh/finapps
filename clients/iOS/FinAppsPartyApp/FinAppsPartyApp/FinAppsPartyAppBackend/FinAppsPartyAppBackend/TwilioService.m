@@ -25,7 +25,7 @@
                 return;
             }
             
-            NSString *twilioServiceUrl = @"http://polar-springs-5033.herokuapp.com/client";
+            NSString *twilioServiceUrl = @"http://peaceful-sea-6196.herokuapp.com/client";
             NSURL *url = [NSURL URLWithString:twilioServiceUrl];
             NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
             [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
