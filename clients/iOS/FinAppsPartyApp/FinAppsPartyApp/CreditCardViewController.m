@@ -10,6 +10,7 @@
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/CardsService.h"
 #import "ActionDAO.h"
 #import "CreditCardCell.h"
+#import "ShowCreditCardViewController.h"
 
 @interface CreditCardViewController () {
     NSArray *_creditCardIds;
@@ -94,6 +95,8 @@
             
             return YES;
         }];
+    } else if ([segue.identifier isEqualToString:@"ShowCreditCardSegue"]) {
+        [segue.destinationViewController setCardId:sender[@"id"]];
     }
 }
 
@@ -141,6 +144,14 @@
     
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"ShowCreditCardSegue" sender:_creditCardData[indexPath.row]];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"ShowCreditCardSegue" sender:_creditCardData[indexPath.row]];
 }
 
 @end

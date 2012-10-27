@@ -154,11 +154,67 @@
                     </navigationItem>
                     <connections>
                         <outlet property="_tableView" destination="nhE-yR-vfo" id="DJI-xF-OpO"/>
+                        <segue destination="XYr-fW-ANq" kind="push" identifier="ShowCreditCardSegue" id="Uaw-AE-6GO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42h-Y6-M5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1715" y="1363"/>
+        </scene>
+        <!--Show Credit Card View Controller - Credit Card-->
+        <scene sceneID="IEN-bh-YX5">
+            <objects>
+                <viewController id="XYr-fW-ANq" customClass="ShowCreditCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yk6-Jc-hS6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="H8U-sM-tSi">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="CellIdentifier" textLabel="FGd-Ad-JLE" detailTextLabel="RJD-4g-QV0" style="IBUITableViewCellStyleValue1" id="i6c-xm-jMe">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-Ad-JLE">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJD-4g-QV0">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XYr-fW-ANq" id="FFi-tp-ycX"/>
+                                    <outlet property="delegate" destination="XYr-fW-ANq" id="tdq-1O-Tcn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="H8U-sM-tSi" firstAttribute="trailing" secondItem="yk6-Jc-hS6" secondAttribute="trailing" type="default" id="Fyu-ir-xh9"/>
+                            <constraint firstItem="H8U-sM-tSi" firstAttribute="top" secondItem="yk6-Jc-hS6" secondAttribute="top" type="default" id="KY7-8L-bxa"/>
+                            <constraint firstItem="H8U-sM-tSi" firstAttribute="bottom" secondItem="yk6-Jc-hS6" secondAttribute="bottom" type="default" id="NAR-mu-SDk"/>
+                            <constraint firstItem="H8U-sM-tSi" firstAttribute="leading" secondItem="yk6-Jc-hS6" secondAttribute="leading" type="default" id="y8G-SB-p4i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Credit Card" id="Qua-7M-ccS"/>
+                    <connections>
+                        <outlet property="tableView" destination="H8U-sM-tSi" id="eEQ-WQ-bk7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnC-91-2y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="2028"/>
         </scene>
         <!--Add Credit Card View Controller - New card-->
         <scene sceneID="F6d-6M-0Zt">
@@ -582,6 +638,79 @@
         <image name="75-phone.png" width="24" height="24"/>
         <image name="Button.png" width="162" height="42"/>
     </resources>
+    <classes>
+        <class className="AddCreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="applyButtonTapped:"/>
+                <relationship kind="action" name="assistanceRequest:"/>
+                <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="CreditCardCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreditCardCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreditCardViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="LoanAmountViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoanAmountViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTapped:"/>
+                <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="submitLoginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="usernameMessageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="usernameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mortgageApplicationButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="MortgageApplicationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MortgageApplicationViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="annualIncomeTextBox" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="annualSalaryTextBox" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="applyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dependantsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dependantsSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="monthlyCreditTextBox" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ShowCreditCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShowCreditCardViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="UserDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

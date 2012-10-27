@@ -13,6 +13,8 @@
 
 - (void)tokenForTwilioWithSuccessBlock:(TwilioServiceSuccessfulBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         static NSString *token = nil;
@@ -31,11 +33,13 @@
             [urlRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
             
             AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:urlRequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                 token = [JSON valueForKey:@"token"];
                 NSLog(@"Twilio token: %@", token);
                 successBlock(token);
                 
             } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                 UserError *userError = [UserError new];
                 userError.title = @"Twilio error.";
                 userError.message = [error description];
