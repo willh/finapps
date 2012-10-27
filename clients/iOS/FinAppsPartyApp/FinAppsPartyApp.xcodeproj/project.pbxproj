@@ -58,6 +58,8 @@
 		ED8E504E163BA436009F12AA /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8E504C163BA436009F12AA /* greenButton@2x.png */; };
 		ED8E5050163BC187009F12AA /* FinAppsParty.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */; };
 		ED8E5052163BC18F009F12AA /* la_caixa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ED8E5051163BC18F009F12AA /* la_caixa.jpeg */; };
+		ED8E506C163BC6F6009F12AA /* btn_hit.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8E506B163BC6F6009F12AA /* btn_hit.png */; };
+		ED8E506E163BC76B009F12AA /* image_mov_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8E506D163BC76B009F12AA /* image_mov_frame.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +168,8 @@
 		ED8E504C163BA436009F12AA /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
 		ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinAppsParty.jpeg; sourceTree = "<group>"; };
 		ED8E5051163BC18F009F12AA /* la_caixa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = la_caixa.jpeg; sourceTree = "<group>"; };
+		ED8E506B163BC6F6009F12AA /* btn_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_hit.png; sourceTree = "<group>"; };
+		ED8E506D163BC76B009F12AA /* image_mov_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_mov_frame.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +356,8 @@
 		ED0E4876163ACF70007039BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED8E506D163BC76B009F12AA /* image_mov_frame.png */,
+				ED8E506B163BC6F6009F12AA /* btn_hit.png */,
 				ED8E5051163BC18F009F12AA /* la_caixa.jpeg */,
 				ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */,
 				ED8E504B163BA436009F12AA /* greenButton.png */,
@@ -511,6 +517,8 @@
 				ED8E504E163BA436009F12AA /* greenButton@2x.png in Resources */,
 				ED8E5050163BC187009F12AA /* FinAppsParty.jpeg in Resources */,
 				ED8E5052163BC18F009F12AA /* la_caixa.jpeg in Resources */,
+				ED8E506C163BC6F6009F12AA /* btn_hit.png in Resources */,
+				ED8E506E163BC76B009F12AA /* image_mov_frame.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
