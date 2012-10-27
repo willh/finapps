@@ -92,10 +92,15 @@
         
         NSString *callerName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.secondName];
         
+        NSString *accountId = _accountId;
+        if (!accountId) {
+            accountId = @"Linked account not chosen yet";
+        }
+        
         NSDictionary *properties = @{
         @"Card type": @(cardTypeSegmentedControl.selectedSegmentIndex),
         @"Card issuer id": @(cardIssuerSegmentedControl.selectedSegmentIndex),
-        @"Linked account id": _accountId
+        @"Linked account id": accountId
         };
         
         [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Adding Credit Card Process" actions:actions properties:properties successBlock:^(NSDictionary *response) {

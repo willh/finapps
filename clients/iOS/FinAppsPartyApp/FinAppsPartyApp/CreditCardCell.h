@@ -15,6 +15,7 @@
 @property (nonatomic, assign) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, assign) IBOutlet UILabel *titleLabel;
 @property (nonatomic, assign) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creditLimitLabel;
 
 - (void)setActive:(BOOL)active;
 

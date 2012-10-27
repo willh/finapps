@@ -38,7 +38,6 @@
         return NO;
     }];
     
-    self.navigationItem.title = [[NSString alloc] initWithFormat:@"%@'s details", [userData valueForKey:@"First Name"]];
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view.

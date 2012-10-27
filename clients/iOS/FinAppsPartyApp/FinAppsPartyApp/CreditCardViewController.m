@@ -128,6 +128,11 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     cell.titleLabel.text = cardData[@"number"];
                     cell.detailLabel.text = cardData[@"issuer"];
+                    if (cardData[@"creditOptions"] != [NSNull null]) {
+                        cell.creditLimitLabel.text = [cardData[@"creditOptions"][@"creditLimit"] stringValue];
+                    } else {
+                        cell.creditLimitLabel.text = @"No limit";
+                    }
                     [cell setActive:YES];
                     [cell setNeedsLayout];
                 });
@@ -140,6 +145,11 @@
         NSDictionary *card = _creditCardData[indexPath.row];
         cell.titleLabel.text = card[@"number"];
         cell.detailLabel.text = card[@"issuer"];
+        if (card[@"creditOptions"] != [NSNull null]) {
+            cell.creditLimitLabel.text = [card[@"creditOptions"][@"creditLimit"] stringValue];
+        } else {
+            cell.creditLimitLabel.text = @"No limit";
+        }
     }
     
     

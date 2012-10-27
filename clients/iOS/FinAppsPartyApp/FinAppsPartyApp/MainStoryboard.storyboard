@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Menu View Controller - Customer Support-->
         <scene sceneID="U0G-90-yXU">
             <objects>
                 <viewController id="Wfo-zv-eaR" customClass="MenuViewController" sceneMemberID="viewController">
@@ -13,11 +13,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-k1-cDv">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="GSu-Ik-Uyz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Call Support" backgroundImage="btn_hit.png">
+                                <state key="normal" title="Call us!" backgroundImage="btn_hit.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -28,15 +25,26 @@
                                     <action selector="buttonTapped:" destination="Wfo-zv-eaR" eventType="touchUpInside" id="Gtz-mz-WEx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Let us help you with your issue. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="9F3-Ag-v9G">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="IwW-Fs-LuA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="i1K-k1-cDv" firstAttribute="top" secondItem="riX-H5-mvN" secondAttribute="top" constant="193" id="XIB-DH-82g"/>
+                            <constraint firstItem="9F3-Ag-v9G" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AeT-8z-EJ3"/>
+                            <constraint firstItem="i1K-k1-cDv" firstAttribute="centerY" secondItem="riX-H5-mvN" secondAttribute="centerY" type="default" id="Jz5-O6-L8m"/>
+                            <constraint firstItem="9F3-Ag-v9G" firstAttribute="top" secondItem="riX-H5-mvN" secondAttribute="top" constant="20" symbolic="YES" type="default" id="KIW-G8-e97"/>
                             <constraint firstItem="i1K-k1-cDv" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Y8C-Xp-sro"/>
                             <constraint firstAttribute="trailing" secondItem="i1K-k1-cDv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fFj-lr-SIQ"/>
+                            <constraint firstAttribute="trailing" secondItem="9F3-Ag-v9G" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mDN-e6-iYN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2ke-PF-DeS"/>
+                    <navigationItem key="navigationItem" title="Customer Support" id="2ke-PF-DeS"/>
                     <connections>
                         <outlet property="callSupportButton" destination="i1K-k1-cDv" id="ugz-HA-bli"/>
                         <segue destination="BMH-Dc-n51" kind="push" identifier="MortgageApplication" id="0OK-jB-Je1"/>
@@ -70,7 +78,7 @@
                             <constraint firstItem="9K7-MT-qmO" firstAttribute="leading" secondItem="G1k-wa-5RW" secondAttribute="leading" type="default" id="xv5-Sg-oeR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="User Details" id="rF4-36-41z"/>
+                    <navigationItem key="navigationItem" title="My Details" id="rF4-36-41z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="9K7-MT-qmO" id="mHT-aO-2cR"/>
@@ -113,19 +121,61 @@
                                                     <color key="textColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Credit Card Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Q-0w-gaT">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Fy5-g6-Msb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Issuer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V80-pZ-95m">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="vny-rE-Dsc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM4-Dc-CMt">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="126" id="juB-P5-tLW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Credit Limit" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjc-jA-pX5">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="ugb-Si-OZo" firstAttribute="trailing" secondItem="Y0Q-0w-gaT" secondAttribute="trailing" type="default" id="3DU-XY-HCj"/>
                                             <constraint firstItem="0P1-d8-McR" firstAttribute="leading" secondItem="9aN-SV-JwS" secondAttribute="leading" constant="149" id="3aW-aN-Vcx"/>
+                                            <constraint firstItem="pIE-CY-rB8" firstAttribute="top" secondItem="9aN-SV-JwS" secondAttribute="top" constant="14" id="6ff-3V-Hbv"/>
+                                            <constraint firstItem="nM4-Dc-CMt" firstAttribute="baseline" secondItem="ugb-Si-OZo" secondAttribute="baseline" type="default" id="8LL-oi-9YP"/>
+                                            <constraint firstItem="Vjc-jA-pX5" firstAttribute="trailing" secondItem="nM4-Dc-CMt" secondAttribute="trailing" type="default" id="ANL-E6-lM5"/>
+                                            <constraint firstItem="nM4-Dc-CMt" firstAttribute="leading" secondItem="Vjc-jA-pX5" secondAttribute="leading" type="default" id="F9u-WC-Vzz"/>
+                                            <constraint firstItem="Vjc-jA-pX5" firstAttribute="top" secondItem="V80-pZ-95m" secondAttribute="top" type="default" id="FD6-jt-JYs"/>
+                                            <constraint firstAttribute="bottom" secondItem="nM4-Dc-CMt" secondAttribute="bottom" constant="21" id="K4b-AR-WBj"/>
                                             <constraint firstItem="ugb-Si-OZo" firstAttribute="leading" secondItem="9aN-SV-JwS" secondAttribute="leading" constant="20" type="default" id="Nby-X2-kzt"/>
                                             <constraint firstItem="pIE-CY-rB8" firstAttribute="leading" secondItem="9aN-SV-JwS" secondAttribute="leading" constant="20" type="default" id="PdJ-a2-Oc4"/>
-                                            <constraint firstItem="pIE-CY-rB8" firstAttribute="top" secondItem="9aN-SV-JwS" secondAttribute="top" constant="20" type="default" id="Q5U-ca-tg4"/>
-                                            <constraint firstItem="ugb-Si-OZo" firstAttribute="top" secondItem="pIE-CY-rB8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wSK-0g-Mn5"/>
+                                            <constraint firstItem="Vjc-jA-pX5" firstAttribute="baseline" secondItem="V80-pZ-95m" secondAttribute="baseline" type="default" id="RJT-T5-OcH"/>
+                                            <constraint firstItem="V80-pZ-95m" firstAttribute="trailing" secondItem="ugb-Si-OZo" secondAttribute="trailing" type="default" id="TDl-p6-bre"/>
+                                            <constraint firstItem="nM4-Dc-CMt" firstAttribute="leading" secondItem="0P1-d8-McR" secondAttribute="leading" type="default" id="ocK-5A-DJ5"/>
+                                            <constraint firstItem="Y0Q-0w-gaT" firstAttribute="top" secondItem="9aN-SV-JwS" secondAttribute="top" constant="27" id="rbi-Ta-cTV"/>
+                                            <constraint firstItem="V80-pZ-95m" firstAttribute="leading" secondItem="9aN-SV-JwS" secondAttribute="leading" constant="20" type="default" id="uVc-8i-kue"/>
                                             <constraint firstItem="0P1-d8-McR" firstAttribute="centerY" secondItem="9aN-SV-JwS" secondAttribute="centerY" type="default" id="y54-Wk-FJR"/>
+                                            <constraint firstItem="Y0Q-0w-gaT" firstAttribute="leading" secondItem="9aN-SV-JwS" secondAttribute="leading" constant="20" type="default" id="yLR-DM-pra"/>
+                                            <constraint firstAttribute="bottom" secondItem="V80-pZ-95m" secondAttribute="bottom" constant="8" id="ydg-Zu-XQM"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="activityIndicator" destination="0P1-d8-McR" id="T3P-T2-4ow"/>
+                                            <outlet property="creditLimitLabel" destination="nM4-Dc-CMt" id="RGi-dk-8BW"/>
                                             <outlet property="detailLabel" destination="ugb-Si-OZo" id="BRR-1I-06D"/>
                                             <outlet property="titleLabel" destination="pIE-CY-rB8" id="7Q3-g5-Ypi"/>
                                         </connections>
@@ -730,8 +780,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="hj2-gc-sPC" kind="relationship" relationship="viewControllers" id="bpt-jU-kLq"/>
-                        <segue destination="wov-Sn-lgg" kind="relationship" relationship="viewControllers" id="l9M-r1-YKT"/>
                         <segue destination="hhX-sJ-hFZ" kind="relationship" relationship="viewControllers" id="kz2-wh-5kQ"/>
+                        <segue destination="wov-Sn-lgg" kind="relationship" relationship="viewControllers" id="l9M-r1-YKT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92A-Sl-Ogo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -759,11 +809,11 @@
             </objects>
             <point key="canvasLocation" x="1787" y="34"/>
         </scene>
-        <!--Navigation Controller - Credit Card-->
+        <!--Navigation Controller - Credit Cards-->
         <scene sceneID="LuU-ze-i1T">
             <objects>
                 <navigationController id="hhX-sJ-hFZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Credit Card" image="192-credit-card.png" id="uzE-gd-EvP"/>
+                    <tabBarItem key="tabBarItem" title="Credit Cards" image="192-credit-card.png" id="uzE-gd-EvP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="t7m-Uj-pXY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -829,6 +879,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="applyButtonTapped:"/>
+                <relationship kind="action" name="assistanceRequest:"/>
                 <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="linkedAccountLabel" candidateClass="UILabel"/>
@@ -838,6 +889,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CreditCardCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="creditLimitLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
@@ -854,6 +906,7 @@
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
+                <relationship kind="action" name="loginButtonTapped:"/>
                 <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
@@ -865,6 +918,7 @@
         <class className="MenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
             <relationships>
+                <relationship kind="action" name="buttonTapped:"/>
                 <relationship kind="outlet" name="callSupportButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="mortgageApplicationButton" candidateClass="UIButton"/>
             </relationships>
@@ -872,6 +926,7 @@
         <class className="MortgageApplicationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MortgageApplicationViewController.h"/>
             <relationships>
+                <relationship kind="action" name="sliderValueChanged:" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="annualIncomeTextBox" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="annualSalaryTextBox" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="applyButton" candidateClass="UIButton"/>

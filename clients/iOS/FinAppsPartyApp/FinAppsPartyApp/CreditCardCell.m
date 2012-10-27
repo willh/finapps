@@ -34,6 +34,7 @@
 - (void)setActive:(BOOL)active {
     self.titleLabel.hidden = !active;
     self.detailLabel.hidden = !active;
+    self.creditLimitLabel.hidden = !active;
 
     if (active) {
         [self.activityIndicator stopAnimating];
