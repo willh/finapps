@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
+#import "UserDAO.h"
+#import "ActionDAO.h"
+#import "BaseDAO.h"
+
 @interface AppDelegate() {
     NetworkingEngine *_networkingEngine;
     CallingEngine *_callingEngine;
@@ -38,6 +42,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+        ActionDAO *actionDAO = [[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext];
+        
+        [actionDAO deleteAllObjects];
+
+        BaseDAO *propertiesDAO = [[BaseDAO alloc] initWithManagedObjectContext:managedObjectContext andEntityName:@"Property"];
+        [propertiesDAO deleteAllObjects];
+        
+        return YES;
+    }];
+    
     return YES;
 }
 
@@ -95,7 +110,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;
@@ -143,7 +158,8 @@
          * Simply deleting the existing store:
          */
          
-         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
+        [self persistentStoreCoordinator];
         
         /*
         

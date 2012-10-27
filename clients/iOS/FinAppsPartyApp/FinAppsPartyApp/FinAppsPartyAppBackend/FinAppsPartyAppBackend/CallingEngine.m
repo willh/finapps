@@ -21,7 +21,7 @@
 
 @implementation CallingEngine
 
-- (void)connect:(NSString *)phoneNumber {
+- (void)connect:(NSString *)phoneNumber withCallerName:(NSString *)callerName {
     TwilioService *twilioService = [[TwilioService alloc] initWithNetworkingEngine:_engine];
     
     [twilioService tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
@@ -32,7 +32,7 @@
         NSDictionary *parameters = nil;
         
         if ([phoneNumber length] > 0) {
-            parameters = @{@"PhoneNumber": phoneNumber};
+            parameters = @{@"PhoneNumber": phoneNumber, @"CallerName": callerName};
         }
         
         _tcConnection = [_tcDevice connect:parameters delegate:nil];

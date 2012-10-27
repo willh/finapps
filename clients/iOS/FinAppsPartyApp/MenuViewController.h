@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTStatusBarOverlay.h"
 
-@interface MenuViewController : UIViewController {
+@interface MenuViewController : UIViewController <MTStatusBarOverlayDelegate>{
     UIButton *callSupportButton;
     UIButton *mortgageApplicationButton;
 }

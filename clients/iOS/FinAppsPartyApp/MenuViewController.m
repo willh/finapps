@@ -7,6 +7,12 @@
 //
 
 #import "MenuViewController.h"
+#import "User.h"
+#import "UserDAO.h"
+#import "ActionDAO.h"
+#import "FinAppsPartyApp/FinAppsPartyAppBackend/FinAppsPartyAppBackend/PayloadService.h"
+#import "FinAppsPartyApp/FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
+
 
 @interface MenuViewController () {
     BOOL _isCalling;
@@ -49,15 +55,45 @@ int const MortgageApplicationCase = 1;
         {
             AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
             CallingEngine *callingEngine = [appDelegate callingEngine];
+            [MTStatusBarOverlay sharedInstance].animation = MTStatusBarOverlayAnimationNone;
+            [MTStatusBarOverlay sharedInstance].delegate = self;
             
             UIButton *senderButton = (UIButton *)sender;
             
             if (!_isCalling) {
-                [callingEngine connect:@"+442033221655"];
-                [senderButton setTitle:@"Disconnect" forState:UIControlStateNormal];
-                _isCalling = YES;
+                [[[TwilioService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
+                    PayloadService *service = [[PayloadService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+
+                    __block User *user = nil;
+                    __block NSArray *actions = nil;
+                    
+                    [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+                        user = [[[UserDAO alloc] initWithManagedObjectContext:managedObjectContext] recentUser];
+                        actions = [[[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext] allAsDictionaries];
+                        
+                        return NO;
+                    }];
+                    
+                    NSString *callerName = [NSString stringWithFormat:@"%@ %@", user.firstName, user.secondName];
+                    
+                    [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Call Support" actions:actions properties:nil successBlock:^(NSDictionary *response) {
+
+                        [callingEngine connect:@"+442033221655" withCallerName:callerName];
+                        [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
+                        [senderButton setTitle:@"Disconnect" forState:UIControlStateNormal];
+                        _isCalling = YES;
+
+                    } failureBlock:^(UserError *error) {
+                        //
+                    }];
+                    
+                } failureBlock:^(UserError *error) {
+                    //
+                }];
+                
             } else {
                 [callingEngine disconnect];
+                [[MTStatusBarOverlay sharedInstance] postFinishMessage:@"Call ended" duration:2];
                 [senderButton setTitle:@"Call Support" forState:UIControlStateNormal];
                 _isCalling = NO;
             }
