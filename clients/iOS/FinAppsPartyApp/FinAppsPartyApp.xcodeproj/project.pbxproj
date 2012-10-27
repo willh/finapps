@@ -50,6 +50,8 @@
 		ED7339A3163B4CD600B1FBD1 /* 75-phone.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7339A2163B4CD600B1FBD1 /* 75-phone.png */; };
 		ED7339A6163B4D7100B1FBD1 /* CreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */; };
 		ED7339A8163B4DC200B1FBD1 /* 192-credit-card.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */; };
+		ED8E500F163B6F1A009F12AA /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */; };
+		ED8E5010163B6FAE009F12AA /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		ED7339A4163B4D7100B1FBD1 /* CreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditCardViewController.h; sourceTree = "<group>"; };
 		ED7339A5163B4D7100B1FBD1 /* CreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditCardViewController.m; sourceTree = "<group>"; };
 		ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "192-credit-card.png"; sourceTree = "<group>"; };
+		ED8E500D163B6F1A009F12AA /* MTStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStatusBarOverlay.h; sourceTree = "<group>"; };
+		ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStatusBarOverlay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,8 @@
 		B3E21530163AA55900091680 = {
 			isa = PBXGroup;
 			children = (
+				ED8E500D163B6F1A009F12AA /* MTStatusBarOverlay.h */,
+				ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */,
 				ED73399D163B4A9400B1FBD1 /* UserDetailsViewController.h */,
 				ED73399E163B4A9400B1FBD1 /* UserDetailsViewController.m */,
 				B3E21547163AA55900091680 /* FinAppsPartyApp */,
@@ -513,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8E5010163B6FAE009F12AA /* MTStatusBarOverlay.m in Sources */,
 				B3E2154E163AA55900091680 /* main.m in Sources */,
 				B3E21552163AA55900091680 /* AppDelegate.m in Sources */,
 				B3E2155B163AA55900091680 /* FinAppsPartyApp.xcdatamodeld in Sources */,
@@ -539,6 +546,7 @@
 			files = (
 				B3E21571163AA55900091680 /* FinAppsPartyAppTests.m in Sources */,
 				ED0E4880163ACFA1007039BB /* LoginViewController.m in Sources */,
+				ED8E500F163B6F1A009F12AA /* MTStatusBarOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

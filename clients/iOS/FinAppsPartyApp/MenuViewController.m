@@ -13,6 +13,7 @@
 #import "FinAppsPartyApp/FinAppsPartyAppBackend/FinAppsPartyAppBackend/PayloadService.h"
 #import "FinAppsPartyApp/FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
+
 @interface MenuViewController () {
     BOOL _isCalling;
 }
@@ -54,11 +55,13 @@ int const MortgageApplicationCase = 1;
         {
             AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
             CallingEngine *callingEngine = [appDelegate callingEngine];
+            [MTStatusBarOverlay sharedInstance].animation = MTStatusBarOverlayAnimationFallDown;
+            [MTStatusBarOverlay sharedInstance].delegate = self;
             
             UIButton *senderButton = (UIButton *)sender;
             
             if (!_isCalling) {
-                
+                [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
                 [[[TwilioService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
                     PayloadService *service = [[PayloadService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
 
@@ -89,6 +92,7 @@ int const MortgageApplicationCase = 1;
                 
             } else {
                 [callingEngine disconnect];
+                [[MTStatusBarOverlay sharedInstance] postFinishMessage:@"Call ended" duration:2];
                 [senderButton setTitle:@"Call Support" forState:UIControlStateNormal];
                 _isCalling = NO;
             }
