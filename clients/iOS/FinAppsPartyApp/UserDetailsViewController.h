@@ -10,6 +10,7 @@
 
 @interface UserDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     UITableView *tableView;
+    NSDictionary *userData;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
