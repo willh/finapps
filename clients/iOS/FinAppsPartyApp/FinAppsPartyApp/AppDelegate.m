@@ -10,6 +10,7 @@
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
 
 #import "UserDAO.h"
+#import "ActionDAO.h"
 #import "BaseDAO.h"
 
 @interface AppDelegate() {
@@ -42,7 +43,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
-        BaseDAO *actionDAO = [[BaseDAO alloc] initWithManagedObjectContext:managedObjectContext andEntityName:@"Action"];
+        ActionDAO *actionDAO = [[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext];
         
         [actionDAO deleteAllObjects];
 

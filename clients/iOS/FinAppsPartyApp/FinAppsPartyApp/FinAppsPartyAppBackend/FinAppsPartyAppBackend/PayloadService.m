@@ -20,7 +20,7 @@
     
     if (!actions) {
         actions = @[];
-    }
+    } 
     
     if (!properties) {
         properties = @[];
