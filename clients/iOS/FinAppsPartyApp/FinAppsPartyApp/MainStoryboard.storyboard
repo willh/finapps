@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wb6-AR-W3E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wb6-AR-W3E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -31,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="i1K-k1-cDv" firstAttribute="top" secondItem="riX-H5-mvN" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CoR-mB-PYp"/>
+                            <constraint firstItem="i1K-k1-cDv" firstAttribute="top" secondItem="riX-H5-mvN" secondAttribute="top" constant="206" id="SRi-0d-frL"/>
                             <constraint firstItem="i1K-k1-cDv" firstAttribute="leading" secondItem="riX-H5-mvN" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Y8C-Xp-sro"/>
                             <constraint firstAttribute="trailing" secondItem="i1K-k1-cDv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fFj-lr-SIQ"/>
                         </constraints>
@@ -516,23 +516,39 @@
                                     <action selector="loginButtonTapped:" destination="wb6-AR-W3E" eventType="touchUpInside" id="VWf-AA-5Wh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="la_caixa.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="rRp-K2-blI">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="BvI-1n-Ngc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="FinAppsParty.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-rG-OYQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="F6f-nt-NAC"/>
+                                    <constraint firstAttribute="height" constant="116" id="KNV-Yx-84Z"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UBN-jz-jD8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="13N-db-R93"/>
                             <constraint firstAttribute="bottom" secondItem="UBN-jz-jD8" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="30x-Ht-Ho9"/>
+                            <constraint firstAttribute="trailing" secondItem="rRp-K2-blI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5WK-1T-cjW"/>
                             <constraint firstItem="Kwh-8z-cDt" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" type="default" id="85Y-p2-wer"/>
-                            <constraint firstItem="1de-b0-qUm" firstAttribute="centerX" secondItem="j3M-6F-5g2" secondAttribute="centerX" type="default" id="KaU-Jw-gfn"/>
+                            <constraint firstItem="ce3-rG-OYQ" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OPg-HP-psw"/>
                             <constraint firstItem="5W5-kJ-Utr" firstAttribute="centerX" secondItem="1de-b0-qUm" secondAttribute="centerX" type="default" id="Rkx-bZ-2pw"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="Kwh-8z-cDt" secondAttribute="trailing" type="default" id="T4U-mL-bPN"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="top" secondItem="R9F-1u-OF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UM6-xg-bpr"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="top" secondItem="5W5-kJ-Utr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XC5-XQ-bAF"/>
+                            <constraint firstItem="qDR-P5-vQ8" firstAttribute="trailing" secondItem="UBN-jz-jD8" secondAttribute="trailing" type="default" id="ZLO-0i-YQc"/>
+                            <constraint firstItem="ce3-rG-OYQ" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" constant="255" id="bDg-Ok-9uj"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="byK-zf-rRe"/>
+                            <constraint firstItem="rRp-K2-blI" firstAttribute="top" secondItem="ce3-rG-OYQ" secondAttribute="top" type="default" id="ezT-2q-ZNV"/>
                             <constraint firstItem="Kwh-8z-cDt" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kNu-k2-qLp"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o2K-9r-WEV"/>
                             <constraint firstItem="5W5-kJ-Utr" firstAttribute="top" secondItem="1de-b0-qUm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pGY-0c-Dvy"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="centerX" secondItem="R9F-1u-OF4" secondAttribute="centerX" type="default" id="tCM-dM-hoT"/>
-                            <constraint firstItem="UBN-jz-jD8" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="u1m-AH-WUp"/>
+                            <constraint firstItem="ce3-rG-OYQ" firstAttribute="centerY" secondItem="rRp-K2-blI" secondAttribute="centerY" type="default" id="uAr-gj-1zD"/>
+                            <constraint firstItem="R9F-1u-OF4" firstAttribute="centerX" secondItem="j3M-6F-5g2" secondAttribute="centerX" type="default" id="w43-2e-dNZ"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zOB-LR-EAb"/>
                             <constraint firstItem="R9F-1u-OF4" firstAttribute="top" secondItem="Kwh-8z-cDt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zi3-wF-W6u"/>
                         </constraints>
@@ -637,13 +653,14 @@
         <image name="192-credit-card.png" width="28" height="18"/>
         <image name="75-phone.png" width="24" height="24"/>
         <image name="Button.png" width="162" height="42"/>
+        <image name="FinAppsParty.jpeg" width="250" height="250"/>
+        <image name="la_caixa.jpeg" width="800" height="655"/>
     </resources>
     <classes>
         <class className="AddCreditCardViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="applyButtonTapped:"/>
-                <relationship kind="action" name="assistanceRequest:"/>
                 <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
             </relationships>
@@ -668,7 +685,6 @@
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
             <relationships>
-                <relationship kind="action" name="loginButtonTapped:"/>
                 <relationship kind="outlet" name="loginMessageLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordMessageLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
