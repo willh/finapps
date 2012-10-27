@@ -7,7 +7,6 @@
 //
 
 #import "ActionDAO.h"
-#import "Action.h"
 
 @implementation ActionDAO
 
@@ -30,6 +29,15 @@
     }
     
     return dictionaries;
+}
+
+- (Action *)newActionWithPropertiesCleared {
+    Action *action = [self createObject];
+    
+    BaseDAO *propertiesDAO = [[BaseDAO alloc] initWithManagedObjectContext:[self managedObjectContext] andEntityName:@"Property"];
+    [propertiesDAO deleteAllObjects];
+    
+    return action;
 }
 
 @end

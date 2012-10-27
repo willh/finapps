@@ -7,9 +7,11 @@
 //
 
 #import "BaseDAO.h"
+#import "Action.h"
 
 @interface ActionDAO : BaseDAO
 
+- (Action *)newActionWithPropertiesCleared;
 - (NSArray *)allAsDictionaries;
 
 @end

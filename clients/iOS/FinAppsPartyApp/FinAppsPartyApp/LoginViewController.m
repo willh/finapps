@@ -9,7 +9,9 @@
 #import "LoginViewController.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/LoginService.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/UserService.h"
+#import "ActionDAO.h"
 #import "Action.h"
+#import "UserDAO.h"
 #import "User.h"
 
 @interface LoginViewController ()
@@ -53,7 +55,10 @@
 
 - (IBAction)loginButtonTapped:(id)sender {
     [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
-        Action *action = [NSEntityDescription insertNewObjectForEntityForName:@"Action" inManagedObjectContext:managedObjectContext];
+        
+        ActionDAO *actionDAO = [[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext];
+        
+        Action *action = [actionDAO newActionWithPropertiesCleared];
         action.actionDescription = @"Login button clicked";
         
         return YES;
@@ -86,7 +91,10 @@
                 NSDictionary *addressDict = holderDict[@"address"];
                 
                 [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
-                    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:managedObjectContext];
+                    
+                    UserDAO *userDAO = [[UserDAO alloc] initWithManagedObjectContext:managedObjectContext];
+                    
+                    User *user = [userDAO createObject];
         
                     
                     user.userId = userId;
@@ -99,7 +107,8 @@
                     user.postalCode = addressDict[@"postalCode"];
                     user.country = addressDict[@"country"];
                     
-                    Action *loginAction = [NSEntityDescription insertNewObjectForEntityForName:@"Action" inManagedObjectContext:managedObjectContext];
+                    ActionDAO *actionDAO = [[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext];
+                    Action *loginAction = [actionDAO newActionWithPropertiesCleared];
                     loginAction.actionDescription = [NSString stringWithFormat:@"User logged in with id: %@", userId];
                     
                     return YES;
