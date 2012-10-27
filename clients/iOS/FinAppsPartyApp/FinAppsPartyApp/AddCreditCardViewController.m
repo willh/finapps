@@ -94,7 +94,8 @@
         
         NSDictionary *properties = @{
         @"Card type": @(cardTypeSegmentedControl.selectedSegmentIndex),
-        @"Card issuer id": @(cardIssuerSegmentedControl.selectedSegmentIndex)
+        @"Card issuer id": @(cardIssuerSegmentedControl.selectedSegmentIndex),
+        @"Linked account id": _accountId
         };
         
         [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Adding Credit Card Process" actions:actions properties:properties successBlock:^(NSDictionary *response) {

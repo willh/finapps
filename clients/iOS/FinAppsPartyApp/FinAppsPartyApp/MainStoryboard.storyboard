@@ -604,31 +604,31 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Banking Account Login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-8z-cDt">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your Caixa Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-8z-cDt">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="Txh-hG-v6t"/>
+                                    <constraint firstAttribute="height" constant="59" id="8WL-bZ-1aE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="User ID:" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="R9F-1u-OF4">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your ID:" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="117" translatesAutoresizingMaskIntoConstraints="NO" id="R9F-1u-OF4">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="iEF-7d-wgl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1de-b0-qUm">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="wb6-AR-W3E" id="Yig-hR-U2j"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qDR-P5-vQ8">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="wb6-AR-W3E" id="EjD-B3-Hxg"/>
@@ -638,7 +638,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="OL8-cR-qtN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -665,40 +665,40 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="FinAppsParty.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="ce3-rG-OYQ">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="149" id="F6f-nt-NAC"/>
+                                    <constraint firstAttribute="width" constant="120" id="4Ng-2p-vHa"/>
                                     <constraint firstAttribute="height" constant="116" id="KNV-Yx-84Z"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="image_mov_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="O5t-5a-t1l">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="XoP-Df-EQJ"/>
                                     <constraint firstAttribute="height" constant="140" id="etQ-RR-6bC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="UBN-jz-jD8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="13N-db-R93"/>
-                            <constraint firstItem="rRp-K2-blI" firstAttribute="bottom" secondItem="ce3-rG-OYQ" secondAttribute="bottom" type="default" id="23d-Lf-ppc"/>
-                            <constraint firstAttribute="bottom" secondItem="UBN-jz-jD8" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="30x-Ht-Ho9"/>
-                            <constraint firstAttribute="trailing" secondItem="rRp-K2-blI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5WK-1T-cjW"/>
+                            <constraint firstItem="UBN-jz-jD8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IY-Ac-7aU"/>
+                            <constraint firstItem="ce3-rG-OYQ" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="33" id="5Cd-6l-yp7"/>
+                            <constraint firstItem="O5t-5a-t1l" firstAttribute="centerY" secondItem="ce3-rG-OYQ" secondAttribute="centerY" type="default" id="6gJ-XD-RLl"/>
                             <constraint firstItem="Kwh-8z-cDt" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" type="default" id="85Y-p2-wer"/>
-                            <constraint firstItem="O5t-5a-t1l" firstAttribute="centerX" secondItem="qDR-P5-vQ8" secondAttribute="centerX" type="default" id="A0e-m2-SOG"/>
-                            <constraint firstItem="O5t-5a-t1l" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" constant="236" id="EfS-Bl-ipX"/>
-                            <constraint firstItem="O5t-5a-t1l" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" type="default" id="Nfd-P3-Xqe"/>
-                            <constraint firstItem="ce3-rG-OYQ" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OPg-HP-psw"/>
+                            <constraint firstItem="rRp-K2-blI" firstAttribute="bottom" secondItem="ce3-rG-OYQ" secondAttribute="bottom" type="default" id="HoY-9Q-W6m"/>
+                            <constraint firstItem="UBN-jz-jD8" firstAttribute="centerX" secondItem="O5t-5a-t1l" secondAttribute="centerX" type="default" id="Hrk-FI-PSp"/>
+                            <constraint firstItem="UBN-jz-jD8" firstAttribute="top" secondItem="j3M-6F-5g2" secondAttribute="top" constant="222" id="LN4-wL-Ndl"/>
                             <constraint firstItem="5W5-kJ-Utr" firstAttribute="centerX" secondItem="1de-b0-qUm" secondAttribute="centerX" type="default" id="Rkx-bZ-2pw"/>
-                            <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="Kwh-8z-cDt" secondAttribute="trailing" type="default" id="T4U-mL-bPN"/>
-                            <constraint firstItem="1de-b0-qUm" firstAttribute="top" secondItem="R9F-1u-OF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UM6-xg-bpr"/>
-                            <constraint firstItem="O5t-5a-t1l" firstAttribute="centerY" secondItem="ce3-rG-OYQ" secondAttribute="centerY" type="default" id="V3P-wF-fQN"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="top" secondItem="5W5-kJ-Utr" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XC5-XQ-bAF"/>
-                            <constraint firstItem="qDR-P5-vQ8" firstAttribute="trailing" secondItem="UBN-jz-jD8" secondAttribute="trailing" type="default" id="ZLO-0i-YQc"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="byK-zf-rRe"/>
                             <constraint firstItem="rRp-K2-blI" firstAttribute="top" secondItem="ce3-rG-OYQ" secondAttribute="top" type="default" id="cIe-6u-MVB"/>
-                            <constraint firstItem="Kwh-8z-cDt" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kNu-k2-qLp"/>
+                            <constraint firstItem="R9F-1u-OF4" firstAttribute="centerX" secondItem="Kwh-8z-cDt" secondAttribute="centerX" type="default" id="dNY-kP-R3o"/>
+                            <constraint firstItem="1de-b0-qUm" firstAttribute="top" secondItem="R9F-1u-OF4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="evx-UQ-HGT"/>
+                            <constraint firstAttribute="bottom" secondItem="O5t-5a-t1l" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ilU-pX-QyL"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="o2K-9r-WEV"/>
-                            <constraint firstItem="5W5-kJ-Utr" firstAttribute="top" secondItem="1de-b0-qUm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pGY-0c-Dvy"/>
+                            <constraint firstItem="rRp-K2-blI" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="153" id="pa8-i6-rzU"/>
+                            <constraint firstItem="Kwh-8z-cDt" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" type="default" id="qJI-G2-x5K"/>
+                            <constraint firstItem="Kwh-8z-cDt" firstAttribute="trailing" secondItem="j3M-6F-5g2" secondAttribute="trailing" type="default" id="rZJ-fh-jxk"/>
                             <constraint firstItem="1de-b0-qUm" firstAttribute="centerX" secondItem="R9F-1u-OF4" secondAttribute="centerX" type="default" id="tCM-dM-hoT"/>
-                            <constraint firstItem="O5t-5a-t1l" firstAttribute="trailing" secondItem="j3M-6F-5g2" secondAttribute="trailing" type="default" id="xKH-WS-znz"/>
+                            <constraint firstItem="UBN-jz-jD8" firstAttribute="trailing" secondItem="qDR-P5-vQ8" secondAttribute="trailing" type="default" id="x06-S8-R6h"/>
+                            <constraint firstItem="5W5-kJ-Utr" firstAttribute="top" secondItem="1de-b0-qUm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ysz-8d-bmV"/>
                             <constraint firstItem="qDR-P5-vQ8" firstAttribute="leading" secondItem="j3M-6F-5g2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zOB-LR-EAb"/>
                             <constraint firstItem="R9F-1u-OF4" firstAttribute="top" secondItem="Kwh-8z-cDt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zi3-wF-W6u"/>
                         </constraints>
@@ -829,7 +829,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="applyButtonTapped:"/>
-                <relationship kind="action" name="assistanceRequest:"/>
                 <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="linkedAccountLabel" candidateClass="UILabel"/>
