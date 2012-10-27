@@ -56,6 +56,8 @@
 		ED8E5010163B6FAE009F12AA /* MTStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ED8E504D163BA436009F12AA /* greenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8E504B163BA436009F12AA /* greenButton.png */; };
 		ED8E504E163BA436009F12AA /* greenButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED8E504C163BA436009F12AA /* greenButton@2x.png */; };
+		ED8E5050163BC187009F12AA /* FinAppsParty.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */; };
+		ED8E5052163BC18F009F12AA /* la_caixa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = ED8E5051163BC18F009F12AA /* la_caixa.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +164,8 @@
 		ED8E500E163B6F1A009F12AA /* MTStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStatusBarOverlay.m; sourceTree = "<group>"; };
 		ED8E504B163BA436009F12AA /* greenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenButton.png; sourceTree = "<group>"; };
 		ED8E504C163BA436009F12AA /* greenButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "greenButton@2x.png"; sourceTree = "<group>"; };
+		ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FinAppsParty.jpeg; sourceTree = "<group>"; };
+		ED8E5051163BC18F009F12AA /* la_caixa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = la_caixa.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +352,8 @@
 		ED0E4876163ACF70007039BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED8E5051163BC18F009F12AA /* la_caixa.jpeg */,
+				ED8E504F163BC187009F12AA /* FinAppsParty.jpeg */,
 				ED8E504B163BA436009F12AA /* greenButton.png */,
 				ED8E504C163BA436009F12AA /* greenButton@2x.png */,
 				ED7339A7163B4DC200B1FBD1 /* 192-credit-card.png */,
@@ -503,6 +509,8 @@
 				ED7339A8163B4DC200B1FBD1 /* 192-credit-card.png in Resources */,
 				ED8E504D163BA436009F12AA /* greenButton.png in Resources */,
 				ED8E504E163BA436009F12AA /* greenButton@2x.png in Resources */,
+				ED8E5050163BC187009F12AA /* FinAppsParty.jpeg in Resources */,
+				ED8E5052163BC18F009F12AA /* la_caixa.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

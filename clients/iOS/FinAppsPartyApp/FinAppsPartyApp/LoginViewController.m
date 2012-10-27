@@ -96,7 +96,6 @@
                     
                     User *user = [userDAO createObject];
         
-                    
                     user.userId = userId;
                     user.createdAt = [NSDate date];
                     user.firstName = holderDict[@"firstName"];
