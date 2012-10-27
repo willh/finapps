@@ -35,9 +35,10 @@
         NSArray *values = [[NSArray alloc] initWithObjects:user.firstName, user.secondName, user.street, user.streetNumber, user.city, user.postalCode, nil];
         userData = [[NSDictionary alloc] initWithObjects:values forKeys:keys];
         
-        
         return NO;
     }];
+    
+    self.navigationItem.title = [[NSString alloc] initWithFormat:@"%@'s details", [userData valueForKey:@"FirstName"]];
     [super viewDidLoad];
 
 	// Do any additional setup after loading the view.

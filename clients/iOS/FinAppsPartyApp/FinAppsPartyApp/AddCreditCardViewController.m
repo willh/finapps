@@ -8,6 +8,13 @@
 
 #import "AddCreditCardViewController.h"
 #import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/CardsService.h"
+#import "MTStatusBarOverlay.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/PayloadService.h"
+#import "FinAppsPartyAppBackend/FinAppsPartyAppBackend/TwilioService.h"
+#import "User.h"
+#import "UserDAO.h"
+#import "Action.h"
+#import "ActionDAO.h"
 
 @interface AddCreditCardViewController ()
 
@@ -43,6 +50,40 @@
     [[[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] addCardWithAccountNumber:@"508ae040e4b0d77699b69329" cardType:cardTypeId cardsIssuer:issuerId successBlock:^(NSDictionary *cardData) {
         
         [self.delegate addCreditCardVC:self didAddCard:cardData];
+        
+    } failureBlock:^(UserError *error) {
+        //
+    }];
+}
+
+- (IBAction)assistanceRequest:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    CallingEngine *callingEngine = [appDelegate callingEngine];
+    [MTStatusBarOverlay sharedInstance].animation = MTStatusBarOverlayAnimationNone;
+    [MTStatusBarOverlay sharedInstance].delegate = self;
+    
+    [[[TwilioService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] tokenForTwilioWithSuccessBlock:^(NSString *twilioToken) {
+        PayloadService *service = [[PayloadService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+        
+        __block User *user = nil;
+        __block NSArray *actions = nil;
+        
+        [CoreDataProvider transactionInContext:^BOOL(NSManagedObjectContext *managedObjectContext) {
+            user = [[[UserDAO alloc] initWithManagedObjectContext:managedObjectContext] recentUser];
+            actions = [[[ActionDAO alloc] initWithManagedObjectContext:managedObjectContext] allAsDictionaries];
+            
+            return NO;
+        }];
+        
+        
+        [service sendPayloadWithToken:twilioToken userId:user.userId context:@"Call Support" actions:actions properties:nil successBlock:^(NSDictionary *response) {
+            
+            [callingEngine connect:@"+442033221655"];
+            [[MTStatusBarOverlay sharedInstance] postMessage:@"Call in progress" animated:YES];
+            
+        } failureBlock:^(UserError *error) {
+            //
+        }];
         
     } failureBlock:^(UserError *error) {
         //

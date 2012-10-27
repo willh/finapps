@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MTStatusBarOverlay.h"
+
 @class AddCreditCardViewController;
 
-@protocol AddCreditCardViewControllerDelegate <NSObject>
+@protocol AddCreditCardViewControllerDelegate <NSObject, MTStatusBarOverlayDelegate>
 
 - (void)addCreditCardVC:(AddCreditCardViewController *)addCreditCardVC didAddCard:(NSDictionary *)cardData;
 
@@ -22,6 +24,7 @@
 }
 
 - (IBAction)applyButtonTapped:(id)sender;
+
 
 @property (nonatomic, weak) id<AddCreditCardViewControllerDelegate> delegate;
 
