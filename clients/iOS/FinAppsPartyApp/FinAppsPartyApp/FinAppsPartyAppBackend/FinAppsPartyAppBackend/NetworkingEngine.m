@@ -56,7 +56,10 @@
 
 - (void)invokeGETRequestWithPath:(NSString *)path params:(NSDictionary *)params successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
     
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     [_httpClient getPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         NSError *error = nil;
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
@@ -67,14 +70,19 @@
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         failureBlock(error);
     }];
 }
 
 - (void)invokePOSTRequestWithPath:(NSString *)path data:(NSDictionary *)data successBlock:(SuccessBlock)successBlock failureBlock:(FailureBlock)failureBlock {
 
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
     [_httpClient postPath:path parameters:data success:^(AFHTTPRequestOperation *operation, id responseObject) {
-
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         NSError *error = nil;
         NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
         if (!error) {
@@ -83,6 +91,8 @@
             failureBlock(error);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        
         failureBlock(error);
     }];
 }

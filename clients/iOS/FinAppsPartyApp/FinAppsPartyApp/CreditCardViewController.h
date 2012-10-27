@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreditCardViewController : UIViewController
+@interface CreditCardViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    __weak IBOutlet UITableView *_tableView;
+}
 
 @end
