@@ -24,4 +24,18 @@
     }];
 }
 
+- (void)accountWithId:(NSString *)accountId successBlock:(AccountSuccessBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
+    
+    NSString *path = [NSString stringWithFormat:@"operations/account/%@", accountId];
+    [_engine invokeGETRequestWithPath:path params:nil successBlock:^(NSDictionary *responseData) {
+        successBlock([responseData valueForKey:@"data"]);
+    } failureBlock:^(NSError *error) {
+        UserError *userError = [UserError new];
+        userError.title = @"Cards error.";
+        userError.message = [error description];
+        
+        failureBlock(userError);
+    }];
+}
+
 @end

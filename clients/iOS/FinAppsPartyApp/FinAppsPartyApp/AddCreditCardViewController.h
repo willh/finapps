@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MTStatusBarOverlay.h"
+#import "AccountSelectViewController.h"
 
 @class AddCreditCardViewController;
 
@@ -17,7 +18,7 @@
 
 @end
 
-@interface AddCreditCardViewController : UIViewController {
+@interface AddCreditCardViewController : UIViewController <AccountSelectViewControllerDelegate> {
     
     __weak IBOutlet UISegmentedControl *cardTypeSegmentedControl;
     __weak IBOutlet UISegmentedControl *cardIssuerSegmentedControl;

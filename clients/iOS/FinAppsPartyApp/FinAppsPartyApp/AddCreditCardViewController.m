@@ -16,7 +16,9 @@
 #import "Action.h"
 #import "ActionDAO.h"
 
-@interface AddCreditCardViewController ()
+@interface AddCreditCardViewController () {
+    NSString *_accountId;
+}
 
 @end
 
@@ -43,19 +45,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AccountSelectorSegue"]) {
+        [segue.destinationViewController setDelegate:self];
+    }
+}
 
 
 - (IBAction)applyButtonTapped:(id)sender {
-    int cardTypeId = cardTypeSegmentedControl.selectedSegmentIndex;
-    int issuerId = cardIssuerSegmentedControl.selectedSegmentIndex;
+    if (_accountId) {
     
-    [[[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] addCardWithAccountNumber:@"508ae040e4b0d77699b69329" cardType:cardTypeId cardsIssuer:issuerId successBlock:^(NSDictionary *cardData) {
+        int cardTypeId = cardTypeSegmentedControl.selectedSegmentIndex;
+        int issuerId = cardIssuerSegmentedControl.selectedSegmentIndex;
         
-        [self.delegate addCreditCardVC:self didAddCard:cardData];
-        
-    } failureBlock:^(UserError *error) {
-        //
-    }];
+        [[[CardsService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]] addCardWithAccountNumber:_accountId cardType:cardTypeId cardsIssuer:issuerId successBlock:^(NSDictionary *cardData) {
+            
+            [self.delegate addCreditCardVC:self didAddCard:cardData];
+            
+        } failureBlock:^(UserError *error) {
+            //
+        }];
+    } else {
+        // Run selector
+        [self performSegueWithIdentifier:@"AccountSelectorSegue" sender:self];
+    }
 }
 
 - (IBAction)assistanceRequest:(id)sender {
@@ -96,6 +109,16 @@
     } failureBlock:^(UserError *error) {
         //
     }];
+}
+
+- (void)accountSelected:(NSString *)accountId {
+    _accountId = accountId;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)accountSelectionCanceled {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
