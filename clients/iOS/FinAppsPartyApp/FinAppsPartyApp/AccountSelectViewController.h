@@ -10,7 +10,7 @@
 
 @protocol AccountSelectViewControllerDelegate <NSObject>
 
-- (void)accountSelected:(NSString *)accountId;
+- (void)accountSelected:(NSString *)accountId accountNumber:(NSString *)accountNumber;
 - (void)accountSelectionCanceled;
 
 @end

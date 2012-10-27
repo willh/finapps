@@ -28,8 +28,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        _selectedIndex = -1;
-        _service = [[AccountService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
     }
     return self;
 }
@@ -39,6 +37,12 @@
     
     [_service accountsListWithSuccessBlock:^(NSArray *accounts) {
         _accountIds = accounts;
+        _accountData = [NSMutableArray new];
+        
+        for (int i = 0; i < [accounts count]; i++) {
+            [_accountData addObject:[NSNull null]];
+        }
+        
         [_tableView reloadData];
     } failureBlock:^(UserError *error) {
         //
@@ -48,6 +52,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _selectedIndex = -1;
+    _service = [[AccountService alloc] initWithNetworkingEngine:[NetworkingEngineProvider networkEngine]];
+
+    
     [self refreshData];
 }
 
@@ -59,7 +68,9 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     if (_selectedIndex >= 0) {
-        [self.delegate accountSelected:_accountIds[_selectedIndex]];
+        [self.delegate accountSelected:_accountIds[_selectedIndex] accountNumber:_accountData[_selectedIndex][@"accountNumber"]];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Please select an account." message:@"New card has to be linked to one of your accounts" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
     }
 }
 
@@ -78,9 +89,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"CellIdentifier";
+    static NSString *AccountCell = @"AccountCell";
     
-    CreditCardCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CreditCardCell *cell = [tableView dequeueReusableCellWithIdentifier:AccountCell];
     
     NSString *accountId = _accountIds[indexPath.row];
     
@@ -94,7 +105,7 @@
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     cell.titleLabel.text = accountData[@"accountNumber"];
-                    cell.detailLabel.text = accountData[@"actualBalance"];
+                    cell.detailLabel.text = [accountData[@"actualBalance"] stringValue];
                     [cell setActive:YES];
                     [cell setNeedsLayout];
                     if (_selectedIndex == indexPath.row) {
@@ -112,14 +123,13 @@
         [cell setActive:YES];
         NSDictionary *accountData = _accountData[indexPath.row];
         cell.titleLabel.text = accountData[@"accountNumber"];
-        cell.detailLabel.text = accountData[@"actualBalance"];
+        cell.detailLabel.text = [accountData[@"actualBalance"] stringValue];
         if (_selectedIndex == indexPath.row) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
     }
-    
     
     return cell;
 }

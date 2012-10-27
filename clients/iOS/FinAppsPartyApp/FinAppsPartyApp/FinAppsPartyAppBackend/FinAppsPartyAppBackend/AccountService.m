@@ -12,7 +12,7 @@
 
 - (void)accountsListWithSuccessBlock:(AccountsSuccessBlock)successBlock failureBlock:(ServiceFailureBlock)failureBlock {
 
-    [_engine invokeGETRequestWithPath:@"operations/accounts/list" params:nil successBlock:^(NSDictionary *responseData) {
+    [_engine invokeGETRequestWithPath:@"operations/account/list" params:nil successBlock:^(NSDictionary *responseData) {
         successBlock([responseData valueForKey:@"data"]);
         
     } failureBlock:^(NSError *error) {

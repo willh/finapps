@@ -111,8 +111,9 @@
     }];
 }
 
-- (void)accountSelected:(NSString *)accountId {
+- (void)accountSelected:(NSString *)accountId accountNumber:(NSString *)accountNumber {
     _accountId = accountId;
+    linkedAccountLabel.text = accountNumber;
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

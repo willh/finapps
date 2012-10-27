@@ -22,6 +22,7 @@
     
     __weak IBOutlet UISegmentedControl *cardTypeSegmentedControl;
     __weak IBOutlet UISegmentedControl *cardIssuerSegmentedControl;
+    __weak IBOutlet UILabel *linkedAccountLabel;
 }
 
 - (IBAction)applyButtonTapped:(id)sender;

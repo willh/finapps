@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wb6-AR-W3E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wb6-AR-W3E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -226,7 +226,7 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Apply for a new credit card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="281" translatesAutoresizingMaskIntoConstraints="NO" id="Z6r-Eh-zpu">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="gyR-VH-qJY"/>
+                                    <constraint firstAttribute="height" constant="33" id="xwD-js-KVQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -274,24 +274,46 @@
                                     <action selector="assistanceRequest:" destination="i6i-ak-uQo" eventType="touchUpInside" id="L6U-SA-N0g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Linked Account:" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="149" translatesAutoresizingMaskIntoConstraints="NO" id="dDr-Mk-A9d">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Opm-X3-2oR"/>
+                                    <constraint firstAttribute="width" constant="149" id="VmQ-zc-hRq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="No account linked yet" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-hs-bLo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Dhe-62-Krx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.45559305329999999" blue="0.84956691579999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="top" secondItem="MvH-XY-ixU" secondAttribute="top" type="default" id="Aah-J9-nqq"/>
-                            <constraint firstItem="ckp-FE-JaB" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="GWy-lY-rsO"/>
                             <constraint firstItem="GS9-kw-wZE" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jby-NL-dev"/>
-                            <constraint firstItem="NKk-tQ-La1" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Jr3-zD-TWN"/>
-                            <constraint firstAttribute="trailing" secondItem="GS9-kw-wZE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KeZ-VB-1Wa"/>
-                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MCO-Nc-tgT"/>
+                            <constraint firstItem="A9p-hs-bLo" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="K6E-QV-ryC"/>
+                            <constraint firstItem="NKk-tQ-La1" firstAttribute="centerX" secondItem="ckp-FE-JaB" secondAttribute="centerX" type="default" id="N2n-t9-osd"/>
                             <constraint firstAttribute="bottom" secondItem="e30-Rb-psH" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="RuZ-Sx-lvx"/>
-                            <constraint firstItem="ieH-tW-bPx" firstAttribute="centerX" secondItem="Z6r-Eh-zpu" secondAttribute="centerX" type="default" id="UuS-Ro-K55"/>
+                            <constraint firstItem="A9p-hs-bLo" firstAttribute="top" secondItem="dDr-Mk-A9d" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Tcp-qi-hBo"/>
                             <constraint firstItem="GS9-kw-wZE" firstAttribute="top" secondItem="ieH-tW-bPx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XMf-na-tND"/>
-                            <constraint firstItem="ieH-tW-bPx" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="YTI-Kv-IJH"/>
+                            <constraint firstItem="ieH-tW-bPx" firstAttribute="top" secondItem="Z6r-Eh-zpu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YEG-1C-f6D"/>
+                            <constraint firstAttribute="trailing" secondItem="GS9-kw-wZE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ym9-JZ-MEM"/>
+                            <constraint firstItem="ieH-tW-bPx" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="ZOe-nh-ZzH"/>
+                            <constraint firstItem="ckp-FE-JaB" firstAttribute="centerX" secondItem="GS9-kw-wZE" secondAttribute="centerX" type="default" id="dDo-fn-rID"/>
                             <constraint firstItem="e30-Rb-psH" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eFQ-cD-7cE"/>
-                            <constraint firstAttribute="trailing" secondItem="e30-Rb-psH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gNU-kv-0Nq"/>
+                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="top" secondItem="MvH-XY-ixU" secondAttribute="top" type="default" id="eJb-iU-wY6"/>
+                            <constraint firstAttribute="trailing" secondItem="A9p-hs-bLo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eiR-lh-vka"/>
                             <constraint firstItem="NKk-tQ-La1" firstAttribute="top" secondItem="ckp-FE-JaB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hvq-Y8-AtQ"/>
-                            <constraint firstItem="ieH-tW-bPx" firstAttribute="top" secondItem="Z6r-Eh-zpu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tC1-v2-YRv"/>
+                            <constraint firstAttribute="trailing" secondItem="e30-Rb-psH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jzc-pj-oc6"/>
+                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="leading" secondItem="MvH-XY-ixU" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="njV-oT-X06"/>
+                            <constraint firstItem="A9p-hs-bLo" firstAttribute="centerX" secondItem="dDr-Mk-A9d" secondAttribute="centerX" type="default" id="sft-mB-Gh2"/>
+                            <constraint firstItem="dDr-Mk-A9d" firstAttribute="top" secondItem="NKk-tQ-La1" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="wMu-Pu-rUr"/>
                             <constraint firstItem="ckp-FE-JaB" firstAttribute="top" secondItem="GS9-kw-wZE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xCg-5V-dYN"/>
+                            <constraint firstItem="Z6r-Eh-zpu" firstAttribute="centerX" secondItem="ieH-tW-bPx" secondAttribute="centerX" type="default" id="xgx-GT-xs8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New card" id="2n8-3c-VL8">
@@ -304,11 +326,127 @@
                     <connections>
                         <outlet property="cardIssuerSegmentedControl" destination="NKk-tQ-La1" id="GBE-Qt-qSY"/>
                         <outlet property="cardTypeSegmentedControl" destination="GS9-kw-wZE" id="K1X-7s-yp4"/>
+                        <outlet property="linkedAccountLabel" destination="A9p-hs-bLo" id="IKX-Xx-3pb"/>
+                        <segue destination="Qi6-LD-BB0" kind="modal" identifier="AccountSelectorSegue" id="xL3-9P-Tvp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgh-au-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2137" y="1363"/>
+            <point key="canvasLocation" x="2246" y="1363"/>
+        </scene>
+        <!--Account Select View Controller-->
+        <scene sceneID="SVu-Fg-aWH">
+            <objects>
+                <viewController id="Qi6-LD-BB0" customClass="AccountSelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhH-Nb-cCu">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QY9-5L-y7B">
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="dfU-kK-Ics">
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="Qi6-LD-BB0" id="RWg-KA-cw5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NST-44-aHq"/>
+                                    <barButtonItem title="Please select" style="plain" id="q3N-x5-q2W"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nc6-zL-Yct"/>
+                                    <barButtonItem systemItem="save" id="y8F-y1-Gnc">
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="Qi6-LD-BB0" id="hyf-JL-Wro"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-3v-o1V">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="88" id="x6H-20-uOK" customClass="AccountCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RKm-Cb-iPG"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR7-Qd-MoN">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="267" id="FL6-yg-zSO"/>
+                                                        <constraint firstAttribute="height" constant="18" id="s4i-g4-Ybh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glf-WK-cSe">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-aN-bbE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="zBH-WT-ApH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpv-vz-tqL">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="f6g-RT-7Uf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ZR7-Qd-MoN" firstAttribute="top" secondItem="x6H-20-uOK" secondAttribute="top" constant="12" id="8Uj-IL-57I"/>
+                                            <constraint firstItem="ZR7-Qd-MoN" firstAttribute="leading" secondItem="glf-WK-cSe" secondAttribute="leading" type="user" id="ET1-5H-gdg"/>
+                                            <constraint firstItem="glf-WK-cSe" firstAttribute="top" secondItem="x6H-20-uOK" secondAttribute="top" constant="41" id="Hwf-ER-c2b"/>
+                                            <constraint firstItem="RKm-Cb-iPG" firstAttribute="centerY" secondItem="x6H-20-uOK" secondAttribute="centerY" type="default" id="MxK-Hd-L66"/>
+                                            <constraint firstAttribute="trailing" secondItem="g7N-aN-bbE" secondAttribute="trailing" constant="20" type="default" id="OCL-bq-kn3"/>
+                                            <constraint firstItem="ZR7-Qd-MoN" firstAttribute="leading" secondItem="lpv-vz-tqL" secondAttribute="leading" type="user" id="YDR-js-KsS"/>
+                                            <constraint firstItem="ZR7-Qd-MoN" firstAttribute="leading" secondItem="g7N-aN-bbE" secondAttribute="leading" type="user" id="bSS-cy-Wzv"/>
+                                            <constraint firstItem="ZR7-Qd-MoN" firstAttribute="leading" secondItem="x6H-20-uOK" secondAttribute="leading" constant="20" type="default" id="e6o-MI-YsK"/>
+                                            <constraint firstAttribute="bottom" secondItem="lpv-vz-tqL" secondAttribute="bottom" constant="11" id="i52-dA-xUV"/>
+                                            <constraint firstAttribute="trailing" secondItem="lpv-vz-tqL" secondAttribute="trailing" constant="20" type="default" id="rv1-Wd-vME"/>
+                                            <constraint firstItem="RKm-Cb-iPG" firstAttribute="centerX" secondItem="g7N-aN-bbE" secondAttribute="centerX" type="default" id="vc9-UM-aL0"/>
+                                            <constraint firstItem="g7N-aN-bbE" firstAttribute="top" secondItem="x6H-20-uOK" secondAttribute="top" constant="24" id="zxE-0q-eZk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="RKm-Cb-iPG" id="zxB-g6-aSD"/>
+                                            <outlet property="detailLabel" destination="glf-WK-cSe" id="zXB-HA-0Yu"/>
+                                            <outlet property="titleLabel" destination="ZR7-Qd-MoN" id="WTq-c1-4wy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qi6-LD-BB0" id="wZb-IV-PUf"/>
+                                    <outlet property="delegate" destination="Qi6-LD-BB0" id="pOz-PH-qpz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="s9g-3v-o1V" firstAttribute="top" secondItem="QY9-5L-y7B" secondAttribute="bottom" type="default" id="QJi-kK-03b"/>
+                            <constraint firstItem="s9g-3v-o1V" firstAttribute="trailing" secondItem="MhH-Nb-cCu" secondAttribute="trailing" type="default" id="QYU-lc-lhG"/>
+                            <constraint firstItem="QY9-5L-y7B" firstAttribute="leading" secondItem="MhH-Nb-cCu" secondAttribute="leading" type="default" id="cEf-N3-GMf"/>
+                            <constraint firstItem="s9g-3v-o1V" firstAttribute="bottom" secondItem="MhH-Nb-cCu" secondAttribute="bottom" type="default" id="eTR-KL-BIE"/>
+                            <constraint firstItem="QY9-5L-y7B" firstAttribute="trailing" secondItem="MhH-Nb-cCu" secondAttribute="trailing" type="default" id="g8e-o7-Gvb"/>
+                            <constraint firstItem="QY9-5L-y7B" firstAttribute="top" secondItem="MhH-Nb-cCu" secondAttribute="top" type="default" id="jLi-px-f01"/>
+                            <constraint firstItem="s9g-3v-o1V" firstAttribute="leading" secondItem="MhH-Nb-cCu" secondAttribute="leading" type="default" id="m9r-4D-UcZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="_tableView" destination="s9g-3v-o1V" id="sKU-ay-AL6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkd-oD-ljp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="1363"/>
         </scene>
         <!--Mortgage Application View Controller - Mortgage Application-->
         <scene sceneID="1Lm-iS-U3v">
@@ -671,12 +809,30 @@
         <image name="la_caixa.jpeg" width="800" height="655"/>
     </resources>
     <classes>
+        <class className="AccountCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccountCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AccountSelectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccountSelectViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButtonTapped:"/>
+                <relationship kind="action" name="saveButtonTapped:"/>
+                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="AddCreditCardViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCreditCardViewController.h"/>
             <relationships>
                 <relationship kind="action" name="applyButtonTapped:"/>
+                <relationship kind="action" name="assistanceRequest:"/>
                 <relationship kind="outlet" name="cardIssuerSegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="cardTypeSegmentedControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="linkedAccountLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="CreditCardCell" superclassName="UITableViewCell">
